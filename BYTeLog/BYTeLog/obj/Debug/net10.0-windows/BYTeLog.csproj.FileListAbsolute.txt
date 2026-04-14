@@ -1,0 +1,16 @@
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\BYTeLog.exe
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\BYTeLog.deps.json
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\BYTeLog.runtimeconfig.json
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\BYTeLog.dll
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\BYTeLog.pdb
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Form1.resources
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.csproj.GenerateResource.cache
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.AssemblyInfoInputs.cache
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.AssemblyInfo.cs
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.csproj.CoreCompileInputs.cache
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.dll
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\refint\BYTeLog.dll
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.pdb
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.genruntimeconfig.cache
+C:\Users\Yumi\OneDrive\Desktop\CODES\C#\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\ref\BYTeLog.dll
