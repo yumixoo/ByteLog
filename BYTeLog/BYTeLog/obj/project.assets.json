@@ -1,26 +1,113 @@
 {
   "version": 3,
   "targets": {
-    "net10.0-windows7.0": {}
+    "net10.0-windows7.0": {
+      "FontAwesome.Sharp/6.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
+      "ReaLTaiizor/3.8.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-windows7.0/ReaLTaiizor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-windows7.0/ReaLTaiizor.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FontAwesome.Sharp/6.6.0": {
+      "sha512": "bJCb2x73UC1nD9+9iMLaUy6Ujf9Pf+buL6FHwVnaoDYT4CQNLazz59hO5gQ0+SMSW0G+ZXmjjShOYr3Jn2UZiw==",
+      "type": "package",
+      "path": "fontawesome.sharp/6.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.6.6.0.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/net7.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/net8.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
+      ]
+    },
+    "ReaLTaiizor/3.8.1.8": {
+      "sha512": "BXegoNe8hNOlTbLGegwp/cLO2z/EIjfluhWIw4d0axdt1B5Q36zfyxfwTF/7Qd8X563UzTttrr6ZzTAMWvIRQg==",
+      "type": "package",
+      "path": "realtaiizor/3.8.1.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.MD",
+        "Taiizor.png",
+        "lib/net10.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net10.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net11.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net11.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net48/ReaLTaiizor.dll",
+        "lib/net48/ReaLTaiizor.xml",
+        "lib/net481/ReaLTaiizor.dll",
+        "lib/net481/ReaLTaiizor.xml",
+        "lib/net6.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net6.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net7.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net7.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net8.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net8.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net9.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net9.0-windows7.0/ReaLTaiizor.xml",
+        "lib/netcoreapp3.1/ReaLTaiizor.dll",
+        "lib/netcoreapp3.1/ReaLTaiizor.xml",
+        "realtaiizor.3.8.1.8.nupkg.sha512",
+        "realtaiizor.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0-windows7.0": []
+    "net10.0-windows7.0": [
+      "FontAwesome.Sharp >= 6.6.0",
+      "ReaLTaiizor >= 3.8.1.8"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Yumi\\.nuget\\packages\\": {}
+    "C:\\Users\\AD\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yumi\\OneDrive\\Desktop\\CODES\\C#\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
+      "projectUniqueName": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
       "projectName": "BYTeLog",
-      "projectPath": "C:\\Users\\Yumi\\OneDrive\\Desktop\\CODES\\C#\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
-      "packagesPath": "C:\\Users\\Yumi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yumi\\OneDrive\\Desktop\\CODES\\C#\\BYTeLog\\BYTeLog\\obj\\",
+      "projectPath": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
+      "packagesPath": "C:\\Users\\AD\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Yumi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +115,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -51,6 +139,16 @@
     "frameworks": {
       "net10.0-windows7.0": {
         "targetAlias": "net10.0-windows",
+        "dependencies": {
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[6.6.0, )"
+          },
+          "ReaLTaiizor": {
+            "target": "Package",
+            "version": "[3.8.1.8, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

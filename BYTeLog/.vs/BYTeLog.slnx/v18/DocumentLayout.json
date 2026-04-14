@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FAAB59C-D664-C3E5-14E5-D433C43167B9}|BYTeLog\\BYTeLog.csproj|c:\\users\\ad\\source\\repos\\bytelogdump\\bytelog\\bytelog\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FAAB59C-D664-C3E5-14E5-D433C43167B9}|BYTeLog\\BYTeLog.csproj|solutionrelative:bytelog\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FAAB59C-D664-C3E5-14E5-D433C43167B9}|BYTeLog\\BYTeLog.csproj|c:\\users\\ad\\source\\repos\\bytelogdump\\bytelog\\bytelog\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{2FAAB59C-D664-C3E5-14E5-D433C43167B9}|BYTeLog\\BYTeLog.csproj|solutionrelative:bytelog\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "BYTeLog\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\Properties\\Resources.resx",
+              "RelativeToolTip": "BYTeLog\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-04-14T15:08:39.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\Form1.cs",
+              "RelativeDocumentMoniker": "BYTeLog\\Form1.cs",
+              "ToolTip": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\Form1.cs [Design]*",
+              "RelativeToolTip": "BYTeLog\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:07:27.553Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
