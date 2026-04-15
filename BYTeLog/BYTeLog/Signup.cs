@@ -39,5 +39,10 @@ namespace BYTeLogSL
         {
 
         }
+
+        private void agreement_CheckedChanged(object sender)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@
             byte_logo = new PictureBox();
             splitContainer1 = new SplitContainer();
             panel2 = new ReaLTaiizor.Controls.Panel();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            agreement = new ReaLTaiizor.Controls.CheckBox();
             first_name_textbox = new ReaLTaiizor.Controls.BigTextBox();
             confirm_password = new ReaLTaiizor.Controls.BigTextBox();
             create_password = new ReaLTaiizor.Controls.BigTextBox();
@@ -50,14 +50,12 @@
             login_button = new ReaLTaiizor.Controls.Button();
             select_role_textbox = new ReaLTaiizor.Controls.BigTextBox();
             sign_up_subtext = new Label();
-            agreement = new ReaLTaiizor.Controls.CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)byte_logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -151,7 +149,6 @@
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.Controls.Add(agreement);
-            panel2.Controls.Add(iconPictureBox1);
             panel2.Controls.Add(first_name_textbox);
             panel2.Controls.Add(confirm_password);
             panel2.Controls.Add(create_password);
@@ -173,19 +170,23 @@
             panel2.TabIndex = 2;
             panel2.Text = "panel2";
             // 
-            // iconPictureBox1
+            // agreement
             // 
-            iconPictureBox1.BackColor = SystemColors.ButtonHighlight;
-            iconPictureBox1.ForeColor = SystemColors.ControlText;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
-            iconPictureBox1.IconColor = SystemColors.ControlText;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.Location = new Point(576, 110);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(32, 32);
-            iconPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            iconPictureBox1.TabIndex = 19;
-            iconPictureBox1.TabStop = false;
+            agreement.BackColor = Color.White;
+            agreement.Checked = false;
+            agreement.CheckedBackColor = Color.FromArgb(66, 76, 85);
+            agreement.CheckedBorderColor = Color.Transparent;
+            agreement.CheckedDisabledColor = Color.Transparent;
+            agreement.CheckedEnabledColor = Color.FromArgb(32, 34, 37);
+            agreement.Enable = true;
+            agreement.Font = new Font("Microsoft Sans Serif", 9F);
+            agreement.ForeColor = SystemColors.WindowText;
+            agreement.Location = new Point(212, 468);
+            agreement.Name = "agreement";
+            agreement.Size = new Size(267, 16);
+            agreement.TabIndex = 20;
+            agreement.Text = "Agree to the BYTe Constitution and By-laws.";
+            agreement.CheckedChanged += agreement_CheckedChanged;
             // 
             // first_name_textbox
             // 
@@ -373,24 +374,6 @@
             sign_up_subtext.Text = "Fill in the information below.";
             sign_up_subtext.Click += login_text_Click;
             // 
-            // agreement
-            // 
-            agreement.BackColor = Color.White;
-            agreement.Checked = false;
-            agreement.CheckedBackColor = Color.FromArgb(66, 76, 85);
-            agreement.CheckedBorderColor = Color.Transparent;
-            agreement.CheckedDisabledColor = Color.Transparent;
-            agreement.CheckedEnabledColor = Color.FromArgb(32, 34, 37);
-            agreement.Enable = true;
-            agreement.Font = new Font("Microsoft Sans Serif", 9F);
-            agreement.ForeColor = SystemColors.WindowText;
-            agreement.Location = new Point(212, 466);
-            agreement.Name = "agreement";
-            agreement.Size = new Size(267, 16);
-            agreement.TabIndex = 20;
-            agreement.Text = "Agree to the BYTe Constitution and By-laws.";
-            agreement.CheckedChanged += agreement_CheckedChanged;
-            // 
             // Signup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -409,7 +392,6 @@
             splitContainer1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -437,7 +419,6 @@
         private ReaLTaiizor.Controls.BigTextBox middle_name_textbox;
         private ReaLTaiizor.Controls.BigTextBox last_name_textbox;
         private ReaLTaiizor.Controls.BigTextBox first_name_textbox;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private ReaLTaiizor.Controls.CheckBox agreement;
     }
 }
