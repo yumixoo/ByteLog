@@ -37,6 +37,8 @@
             byte_logo = new PictureBox();
             splitContainer1 = new SplitContainer();
             panel2 = new ReaLTaiizor.Controls.Panel();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            first_name_textbox = new ReaLTaiizor.Controls.BigTextBox();
             confirm_password = new ReaLTaiizor.Controls.BigTextBox();
             create_password = new ReaLTaiizor.Controls.BigTextBox();
             student_id = new ReaLTaiizor.Controls.BigTextBox();
@@ -48,8 +50,7 @@
             login_button = new ReaLTaiizor.Controls.Button();
             select_role_textbox = new ReaLTaiizor.Controls.BigTextBox();
             sign_up_subtext = new Label();
-            first_name_textbox = new ReaLTaiizor.Controls.BigTextBox();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            agreement = new ReaLTaiizor.Controls.CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)byte_logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -149,6 +150,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
+            panel2.Controls.Add(agreement);
             panel2.Controls.Add(iconPictureBox1);
             panel2.Controls.Add(first_name_textbox);
             panel2.Controls.Add(confirm_password);
@@ -171,13 +173,44 @@
             panel2.TabIndex = 2;
             panel2.Text = "panel2";
             // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.ForeColor = SystemColors.ControlText;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
+            iconPictureBox1.IconColor = SystemColors.ControlText;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.Location = new Point(576, 110);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(32, 32);
+            iconPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            iconPictureBox1.TabIndex = 19;
+            iconPictureBox1.TabStop = false;
+            // 
+            // first_name_textbox
+            // 
+            first_name_textbox.BackColor = Color.Transparent;
+            first_name_textbox.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            first_name_textbox.ForeColor = Color.DimGray;
+            first_name_textbox.Image = null;
+            first_name_textbox.Location = new Point(84, 159);
+            first_name_textbox.MaxLength = 32767;
+            first_name_textbox.Multiline = false;
+            first_name_textbox.Name = "first_name_textbox";
+            first_name_textbox.ReadOnly = false;
+            first_name_textbox.Size = new Size(258, 47);
+            first_name_textbox.TabIndex = 18;
+            first_name_textbox.Text = "First Name";
+            first_name_textbox.TextAlignment = HorizontalAlignment.Left;
+            first_name_textbox.UseSystemPasswordChar = false;
+            // 
             // confirm_password
             // 
             confirm_password.BackColor = Color.Transparent;
             confirm_password.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             confirm_password.ForeColor = Color.DimGray;
             confirm_password.Image = null;
-            confirm_password.Location = new Point(84, 424);
+            confirm_password.Location = new Point(84, 416);
             confirm_password.MaxLength = 32767;
             confirm_password.Multiline = false;
             confirm_password.Name = "confirm_password";
@@ -194,7 +227,7 @@
             create_password.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             create_password.ForeColor = Color.DimGray;
             create_password.Image = null;
-            create_password.Location = new Point(84, 360);
+            create_password.Location = new Point(84, 352);
             create_password.MaxLength = 32767;
             create_password.Multiline = false;
             create_password.Name = "create_password";
@@ -211,7 +244,7 @@
             student_id.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             student_id.ForeColor = Color.DimGray;
             student_id.Image = null;
-            student_id.Location = new Point(84, 297);
+            student_id.Location = new Point(84, 289);
             student_id.MaxLength = 32767;
             student_id.Multiline = false;
             student_id.Name = "student_id";
@@ -228,7 +261,7 @@
             middle_name_textbox.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             middle_name_textbox.ForeColor = Color.DimGray;
             middle_name_textbox.Image = null;
-            middle_name_textbox.Location = new Point(84, 231);
+            middle_name_textbox.Location = new Point(84, 223);
             middle_name_textbox.MaxLength = 32767;
             middle_name_textbox.Multiline = false;
             middle_name_textbox.Name = "middle_name_textbox";
@@ -245,7 +278,7 @@
             last_name_textbox.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             last_name_textbox.ForeColor = Color.DimGray;
             last_name_textbox.Image = null;
-            last_name_textbox.Location = new Point(359, 167);
+            last_name_textbox.Location = new Point(359, 159);
             last_name_textbox.MaxLength = 32767;
             last_name_textbox.Multiline = false;
             last_name_textbox.Name = "last_name_textbox";
@@ -303,7 +336,7 @@
             login_button.Image = null;
             login_button.ImageAlign = ContentAlignment.MiddleLeft;
             login_button.InactiveColor = Color.FromArgb(1, 36, 130);
-            login_button.Location = new Point(84, 501);
+            login_button.Location = new Point(84, 509);
             login_button.Name = "login_button";
             login_button.PressedBorderColor = Color.FromArgb(1, 36, 130);
             login_button.PressedColor = Color.White;
@@ -318,7 +351,7 @@
             select_role_textbox.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             select_role_textbox.ForeColor = Color.DimGray;
             select_role_textbox.Image = null;
-            select_role_textbox.Location = new Point(84, 103);
+            select_role_textbox.Location = new Point(84, 96);
             select_role_textbox.MaxLength = 32767;
             select_role_textbox.Multiline = false;
             select_role_textbox.Name = "select_role_textbox";
@@ -340,36 +373,23 @@
             sign_up_subtext.Text = "Fill in the information below.";
             sign_up_subtext.Click += login_text_Click;
             // 
-            // first_name_textbox
+            // agreement
             // 
-            first_name_textbox.BackColor = Color.Transparent;
-            first_name_textbox.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            first_name_textbox.ForeColor = Color.DimGray;
-            first_name_textbox.Image = null;
-            first_name_textbox.Location = new Point(84, 167);
-            first_name_textbox.MaxLength = 32767;
-            first_name_textbox.Multiline = false;
-            first_name_textbox.Name = "first_name_textbox";
-            first_name_textbox.ReadOnly = false;
-            first_name_textbox.Size = new Size(258, 47);
-            first_name_textbox.TabIndex = 18;
-            first_name_textbox.Text = "First Name";
-            first_name_textbox.TextAlignment = HorizontalAlignment.Left;
-            first_name_textbox.UseSystemPasswordChar = false;
-            // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = SystemColors.ButtonHighlight;
-            iconPictureBox1.ForeColor = SystemColors.ControlText;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
-            iconPictureBox1.IconColor = SystemColors.ControlText;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.Location = new Point(576, 110);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(32, 32);
-            iconPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            iconPictureBox1.TabIndex = 19;
-            iconPictureBox1.TabStop = false;
+            agreement.BackColor = Color.White;
+            agreement.Checked = false;
+            agreement.CheckedBackColor = Color.FromArgb(66, 76, 85);
+            agreement.CheckedBorderColor = Color.Transparent;
+            agreement.CheckedDisabledColor = Color.Transparent;
+            agreement.CheckedEnabledColor = Color.FromArgb(32, 34, 37);
+            agreement.Enable = true;
+            agreement.Font = new Font("Microsoft Sans Serif", 9F);
+            agreement.ForeColor = SystemColors.WindowText;
+            agreement.Location = new Point(212, 466);
+            agreement.Name = "agreement";
+            agreement.Size = new Size(267, 16);
+            agreement.TabIndex = 20;
+            agreement.Text = "Agree to the BYTe Constitution and By-laws.";
+            agreement.CheckedChanged += agreement_CheckedChanged;
             // 
             // Signup
             // 
@@ -379,7 +399,7 @@
             Controls.Add(panel1);
             Controls.Add(splitContainer1);
             Name = "Signup";
-            Text = "Form2";
+            Text = "Signup";
             Load += Signup_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -418,5 +438,6 @@
         private ReaLTaiizor.Controls.BigTextBox last_name_textbox;
         private ReaLTaiizor.Controls.BigTextBox first_name_textbox;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private ReaLTaiizor.Controls.CheckBox agreement;
     }
 }
