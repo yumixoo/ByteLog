@@ -153,5 +153,12 @@ namespace BYTeLog
                 currentBtn.IconColor = Color.FromArgb(161, 161, 170);
             }
         }
+
+
+        //---------------------- TESTING ------------------//
+        private void TestMethod() 
+        {
+            MessageBox.Show("Test");
+        }
     }
 }
