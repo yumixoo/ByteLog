@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5SeaW6h6ttA=",
+  "dgSpecHash": "xSBqLLLLRIE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
+  "projectFilePath": "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AD\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\realtaiizor\\3.8.1.8\\realtaiizor.3.8.1.8.nupkg.sha512"

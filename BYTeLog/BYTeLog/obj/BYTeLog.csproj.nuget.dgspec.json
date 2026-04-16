@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj": {}
+    "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\BYTeLog\\BYTeLog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj": {
+    "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\BYTeLog\\BYTeLog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
+        "projectUniqueName": "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
         "projectName": "BYTeLog",
-        "projectPath": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
+        "projectPath": "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\BYTeLog\\BYTeLog.csproj",
         "packagesPath": "C:\\Users\\AD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AD\\source\\repos\\ByteLogDUMP\\BYTeLog\\BYTeLog\\obj\\",
+        "outputPath": "C:\\Users\\AD\\source\\repos\\ByteLogDump\\BYTeLog\\BYTeLog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -37,11 +37,20 @@ namespace BYTeLog
             mainHostPanel = new System.Windows.Forms.Panel();
             contentPanel = new System.Windows.Forms.Panel();
             topHeaderPanel = new System.Windows.Forms.Panel();
+            logoDivider2 = new System.Windows.Forms.Panel();
             headerDivider = new System.Windows.Forms.Panel();
             lblSemester = new Label();
             lblPageTitle = new Label();
             sidebarPanel = new System.Windows.Forms.Panel();
             panel1 = new ReaLTaiizor.Controls.Panel();
+            logoDivider = new System.Windows.Forms.Panel();
+            lblTagline = new Label();
+            lblBrand = new Label();
+            sidebarFooterPanel = new System.Windows.Forms.Panel();
+            lblUserRole = new Label();
+            lblUserName = new Label();
+            lblAvatar = new Label();
+            scrollableNavPanel = new System.Windows.Forms.Panel();
             btnSettings = new IconButton();
             lblSystem = new Label();
             btnCalendar = new IconButton();
@@ -58,14 +67,6 @@ namespace BYTeLog
             btnMembers = new IconButton();
             btnDashboard = new IconButton();
             lblMain = new Label();
-            logoDivider = new System.Windows.Forms.Panel();
-            lblTagline = new Label();
-            lblBrand = new Label();
-            sidebarFooterPanel = new System.Windows.Forms.Panel();
-            lblUserRole = new Label();
-            lblUserName = new Label();
-            lblAvatar = new Label();
-            scrollableNavPanel = new System.Windows.Forms.Panel();
             mainHostPanel.SuspendLayout();
             topHeaderPanel.SuspendLayout();
             sidebarPanel.SuspendLayout();
@@ -83,7 +84,7 @@ namespace BYTeLog
             mainHostPanel.Location = new Point(0, 0);
             mainHostPanel.Margin = new Padding(4);
             mainHostPanel.Name = "mainHostPanel";
-            mainHostPanel.Size = new Size(1600, 1025);
+            mainHostPanel.Size = new Size(1280, 720);
             mainHostPanel.TabIndex = 1;
             // 
             // contentPanel
@@ -93,12 +94,13 @@ namespace BYTeLog
             contentPanel.Location = new Point(325, 105);
             contentPanel.Margin = new Padding(4);
             contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(1275, 920);
+            contentPanel.Size = new Size(955, 615);
             contentPanel.TabIndex = 2;
             // 
             // topHeaderPanel
             // 
             topHeaderPanel.BackColor = Color.White;
+            topHeaderPanel.Controls.Add(logoDivider2);
             topHeaderPanel.Controls.Add(headerDivider);
             topHeaderPanel.Controls.Add(lblSemester);
             topHeaderPanel.Controls.Add(lblPageTitle);
@@ -106,8 +108,17 @@ namespace BYTeLog
             topHeaderPanel.Location = new Point(325, 0);
             topHeaderPanel.Margin = new Padding(4);
             topHeaderPanel.Name = "topHeaderPanel";
-            topHeaderPanel.Size = new Size(1275, 105);
+            topHeaderPanel.Size = new Size(955, 105);
             topHeaderPanel.TabIndex = 1;
+            // 
+            // logoDivider2
+            // 
+            logoDivider2.BackColor = Color.FromArgb(236, 230, 222);
+            logoDivider2.Location = new Point(0, 0);
+            logoDivider2.Margin = new Padding(4);
+            logoDivider2.Name = "logoDivider2";
+            logoDivider2.Size = new Size(1, 106);
+            logoDivider2.TabIndex = 4;
             // 
             // headerDivider
             // 
@@ -116,7 +127,7 @@ namespace BYTeLog
             headerDivider.Location = new Point(0, 104);
             headerDivider.Margin = new Padding(4);
             headerDivider.Name = "headerDivider";
-            headerDivider.Size = new Size(1275, 1);
+            headerDivider.Size = new Size(955, 1);
             headerDivider.TabIndex = 3;
             // 
             // lblSemester
@@ -156,7 +167,7 @@ namespace BYTeLog
             sidebarPanel.Location = new Point(0, 0);
             sidebarPanel.Margin = new Padding(4);
             sidebarPanel.Name = "sidebarPanel";
-            sidebarPanel.Size = new Size(325, 1025);
+            sidebarPanel.Size = new Size(325, 720);
             sidebarPanel.TabIndex = 0;
             // 
             // panel1
@@ -174,334 +185,10 @@ namespace BYTeLog
             panel1.TabIndex = 23;
             panel1.Text = "logoMark";
             // 
-            // btnSettings
-            // 
-            btnSettings.BackColor = Color.White;
-            btnSettings.FlatAppearance.BorderSize = 0;
-            btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnSettings.ForeColor = Color.FromArgb(82, 82, 91);
-            btnSettings.IconChar = IconChar.Cog;
-            btnSettings.IconColor = Color.FromArgb(161, 161, 170);
-            btnSettings.IconFont = IconFont.Auto;
-            btnSettings.IconSize = 18;
-            btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(22, 758);
-            btnSettings.Margin = new Padding(4);
-            btnSettings.Name = "btnSettings";
-            btnSettings.Padding = new Padding(15, 0, 0, 0);
-            btnSettings.Size = new Size(275, 50);
-            btnSettings.TabIndex = 19;
-            btnSettings.Text = "Settings";
-            btnSettings.TextAlign = ContentAlignment.MiddleLeft;
-            btnSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnSettings.UseVisualStyleBackColor = false;
-            // 
-            // lblSystem
-            // 
-            lblSystem.AutoSize = true;
-            lblSystem.Font = new Font("Poppins", 8F, FontStyle.Bold);
-            lblSystem.ForeColor = Color.FromArgb(161, 161, 170);
-            lblSystem.Location = new Point(28, 727);
-            lblSystem.Margin = new Padding(4, 0, 4, 0);
-            lblSystem.Name = "lblSystem";
-            lblSystem.Size = new Size(68, 25);
-            lblSystem.TabIndex = 18;
-            lblSystem.Text = "SYSTEM";
-            // 
-            // btnCalendar
-            // 
-            btnCalendar.BackColor = Color.White;
-            btnCalendar.FlatAppearance.BorderSize = 0;
-            btnCalendar.FlatStyle = FlatStyle.Flat;
-            btnCalendar.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnCalendar.ForeColor = Color.FromArgb(82, 82, 91);
-            btnCalendar.IconChar = IconChar.Calendar;
-            btnCalendar.IconColor = Color.FromArgb(161, 161, 170);
-            btnCalendar.IconFont = IconFont.Auto;
-            btnCalendar.IconSize = 18;
-            btnCalendar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCalendar.Location = new Point(22, 658);
-            btnCalendar.Margin = new Padding(4);
-            btnCalendar.Name = "btnCalendar";
-            btnCalendar.Padding = new Padding(15, 0, 0, 0);
-            btnCalendar.Size = new Size(275, 50);
-            btnCalendar.TabIndex = 17;
-            btnCalendar.Text = "Calendar";
-            btnCalendar.TextAlign = ContentAlignment.MiddleLeft;
-            btnCalendar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnCalendar.UseVisualStyleBackColor = false;
-            // 
-            // btnAuditLog
-            // 
-            btnAuditLog.BackColor = Color.White;
-            btnAuditLog.FlatAppearance.BorderSize = 0;
-            btnAuditLog.FlatStyle = FlatStyle.Flat;
-            btnAuditLog.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnAuditLog.ForeColor = Color.FromArgb(82, 82, 91);
-            btnAuditLog.IconChar = IconChar.ClockRotateLeft;
-            btnAuditLog.IconColor = Color.FromArgb(161, 161, 170);
-            btnAuditLog.IconFont = IconFont.Auto;
-            btnAuditLog.IconSize = 18;
-            btnAuditLog.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAuditLog.Location = new Point(22, 608);
-            btnAuditLog.Margin = new Padding(4);
-            btnAuditLog.Name = "btnAuditLog";
-            btnAuditLog.Padding = new Padding(15, 0, 0, 0);
-            btnAuditLog.Size = new Size(275, 50);
-            btnAuditLog.TabIndex = 16;
-            btnAuditLog.Text = "Audit Log";
-            btnAuditLog.TextAlign = ContentAlignment.MiddleLeft;
-            btnAuditLog.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAuditLog.UseVisualStyleBackColor = false;
-            // 
-            // btnArchive
-            // 
-            btnArchive.BackColor = Color.White;
-            btnArchive.FlatAppearance.BorderSize = 0;
-            btnArchive.FlatStyle = FlatStyle.Flat;
-            btnArchive.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnArchive.ForeColor = Color.FromArgb(82, 82, 91);
-            btnArchive.IconChar = IconChar.Archive;
-            btnArchive.IconColor = Color.FromArgb(161, 161, 170);
-            btnArchive.IconFont = IconFont.Auto;
-            btnArchive.IconSize = 18;
-            btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
-            btnArchive.Location = new Point(22, 558);
-            btnArchive.Margin = new Padding(4);
-            btnArchive.Name = "btnArchive";
-            btnArchive.Padding = new Padding(15, 0, 0, 0);
-            btnArchive.Size = new Size(275, 50);
-            btnArchive.TabIndex = 15;
-            btnArchive.Text = "Archive";
-            btnArchive.TextAlign = ContentAlignment.MiddleLeft;
-            btnArchive.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnArchive.UseVisualStyleBackColor = false;
-            // 
-            // btnClearance
-            // 
-            btnClearance.BackColor = Color.White;
-            btnClearance.FlatAppearance.BorderSize = 0;
-            btnClearance.FlatStyle = FlatStyle.Flat;
-            btnClearance.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnClearance.ForeColor = Color.FromArgb(82, 82, 91);
-            btnClearance.IconChar = IconChar.CheckCircle;
-            btnClearance.IconColor = Color.FromArgb(161, 161, 170);
-            btnClearance.IconFont = IconFont.Auto;
-            btnClearance.IconSize = 18;
-            btnClearance.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClearance.Location = new Point(25, 508);
-            btnClearance.Margin = new Padding(4);
-            btnClearance.Name = "btnClearance";
-            btnClearance.Padding = new Padding(15, 0, 0, 0);
-            btnClearance.Size = new Size(275, 50);
-            btnClearance.TabIndex = 14;
-            btnClearance.Text = "Clearance";
-            btnClearance.TextAlign = ContentAlignment.MiddleLeft;
-            btnClearance.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnClearance.UseVisualStyleBackColor = false;
-            // 
-            // lblOperations
-            // 
-            lblOperations.AutoSize = true;
-            lblOperations.Font = new Font("Poppins", 8F, FontStyle.Bold);
-            lblOperations.ForeColor = Color.FromArgb(161, 161, 170);
-            lblOperations.Location = new Point(28, 479);
-            lblOperations.Margin = new Padding(4, 0, 4, 0);
-            lblOperations.Name = "lblOperations";
-            lblOperations.Size = new Size(102, 25);
-            lblOperations.TabIndex = 13;
-            lblOperations.Text = "OPERATIONS";
-            // 
-            // btnReports
-            // 
-            btnReports.BackColor = Color.White;
-            btnReports.FlatAppearance.BorderSize = 0;
-            btnReports.FlatStyle = FlatStyle.Flat;
-            btnReports.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnReports.ForeColor = Color.FromArgb(82, 82, 91);
-            btnReports.IconChar = IconChar.FileText;
-            btnReports.IconColor = Color.FromArgb(161, 161, 170);
-            btnReports.IconFont = IconFont.Auto;
-            btnReports.IconSize = 18;
-            btnReports.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReports.Location = new Point(22, 360);
-            btnReports.Margin = new Padding(4);
-            btnReports.Name = "btnReports";
-            btnReports.Padding = new Padding(15, 0, 0, 0);
-            btnReports.Size = new Size(275, 50);
-            btnReports.TabIndex = 12;
-            btnReports.Text = "Reports";
-            btnReports.TextAlign = ContentAlignment.MiddleLeft;
-            btnReports.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnReports.UseVisualStyleBackColor = false;
-            // 
-            // btnFines
-            // 
-            btnFines.BackColor = Color.White;
-            btnFines.FlatAppearance.BorderSize = 0;
-            btnFines.FlatStyle = FlatStyle.Flat;
-            btnFines.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnFines.ForeColor = Color.FromArgb(82, 82, 91);
-            btnFines.IconChar = IconChar.CircleExclamation;
-            btnFines.IconColor = Color.FromArgb(161, 161, 170);
-            btnFines.IconFont = IconFont.Auto;
-            btnFines.IconSize = 18;
-            btnFines.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFines.Location = new Point(22, 410);
-            btnFines.Margin = new Padding(4);
-            btnFines.Name = "btnFines";
-            btnFines.Padding = new Padding(15, 0, 0, 0);
-            btnFines.Size = new Size(275, 50);
-            btnFines.TabIndex = 11;
-            btnFines.Text = "Fines";
-            btnFines.TextAlign = ContentAlignment.MiddleLeft;
-            btnFines.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnFines.UseVisualStyleBackColor = false;
-            // 
-            // btnPayments
-            // 
-            btnPayments.BackColor = Color.White;
-            btnPayments.FlatAppearance.BorderSize = 0;
-            btnPayments.FlatStyle = FlatStyle.Flat;
-            btnPayments.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnPayments.ForeColor = Color.FromArgb(82, 82, 91);
-            btnPayments.IconChar = IconChar.CreditCard;
-            btnPayments.IconColor = Color.FromArgb(161, 161, 170);
-            btnPayments.IconFont = IconFont.Auto;
-            btnPayments.IconSize = 18;
-            btnPayments.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPayments.Location = new Point(22, 310);
-            btnPayments.Margin = new Padding(4);
-            btnPayments.Name = "btnPayments";
-            btnPayments.Padding = new Padding(15, 0, 0, 0);
-            btnPayments.Size = new Size(275, 50);
-            btnPayments.TabIndex = 10;
-            btnPayments.Text = "Payments";
-            btnPayments.TextAlign = ContentAlignment.MiddleLeft;
-            btnPayments.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnPayments.UseVisualStyleBackColor = false;
-            // 
-            // lblFinance
-            // 
-            lblFinance.AutoSize = true;
-            lblFinance.Font = new Font("Poppins", 8F, FontStyle.Bold);
-            lblFinance.ForeColor = Color.FromArgb(161, 161, 170);
-            lblFinance.Location = new Point(28, 279);
-            lblFinance.Margin = new Padding(4, 0, 4, 0);
-            lblFinance.Name = "lblFinance";
-            lblFinance.Size = new Size(75, 25);
-            lblFinance.TabIndex = 9;
-            lblFinance.Text = "FINANCE";
-            // 
-            // btnAttendance
-            // 
-            btnAttendance.BackColor = Color.White;
-            btnAttendance.FlatAppearance.BorderSize = 0;
-            btnAttendance.FlatStyle = FlatStyle.Flat;
-            btnAttendance.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnAttendance.ForeColor = Color.FromArgb(82, 82, 91);
-            btnAttendance.IconChar = IconChar.ClockFour;
-            btnAttendance.IconColor = Color.FromArgb(161, 161, 170);
-            btnAttendance.IconFont = IconFont.Auto;
-            btnAttendance.IconSize = 18;
-            btnAttendance.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAttendance.Location = new Point(22, 210);
-            btnAttendance.Margin = new Padding(4);
-            btnAttendance.Name = "btnAttendance";
-            btnAttendance.Padding = new Padding(15, 0, 0, 0);
-            btnAttendance.Size = new Size(275, 50);
-            btnAttendance.TabIndex = 8;
-            btnAttendance.Text = "Attendance";
-            btnAttendance.TextAlign = ContentAlignment.MiddleLeft;
-            btnAttendance.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAttendance.UseVisualStyleBackColor = false;
-            // 
-            // btnActivities
-            // 
-            btnActivities.BackColor = Color.White;
-            btnActivities.FlatAppearance.BorderSize = 0;
-            btnActivities.FlatStyle = FlatStyle.Flat;
-            btnActivities.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnActivities.ForeColor = Color.FromArgb(82, 82, 91);
-            btnActivities.IconChar = IconChar.Calendar;
-            btnActivities.IconColor = Color.FromArgb(161, 161, 170);
-            btnActivities.IconFont = IconFont.Auto;
-            btnActivities.IconSize = 18;
-            btnActivities.ImageAlign = ContentAlignment.MiddleLeft;
-            btnActivities.Location = new Point(22, 160);
-            btnActivities.Margin = new Padding(4);
-            btnActivities.Name = "btnActivities";
-            btnActivities.Padding = new Padding(15, 0, 0, 0);
-            btnActivities.Size = new Size(275, 50);
-            btnActivities.TabIndex = 7;
-            btnActivities.Text = "Activities";
-            btnActivities.TextAlign = ContentAlignment.MiddleLeft;
-            btnActivities.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnActivities.UseVisualStyleBackColor = false;
-            // 
-            // btnMembers
-            // 
-            btnMembers.BackColor = Color.White;
-            btnMembers.FlatAppearance.BorderSize = 0;
-            btnMembers.FlatStyle = FlatStyle.Flat;
-            btnMembers.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnMembers.ForeColor = Color.FromArgb(82, 82, 91);
-            btnMembers.IconChar = IconChar.Users;
-            btnMembers.IconColor = Color.FromArgb(161, 161, 170);
-            btnMembers.IconFont = IconFont.Auto;
-            btnMembers.IconSize = 18;
-            btnMembers.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMembers.Location = new Point(22, 110);
-            btnMembers.Margin = new Padding(4);
-            btnMembers.Name = "btnMembers";
-            btnMembers.Padding = new Padding(15, 0, 0, 0);
-            btnMembers.Size = new Size(275, 50);
-            btnMembers.TabIndex = 6;
-            btnMembers.Text = "Members";
-            btnMembers.TextAlign = ContentAlignment.MiddleLeft;
-            btnMembers.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnMembers.UseVisualStyleBackColor = false;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.BackColor = Color.FromArgb(233, 239, 255);
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
-            btnDashboard.ForeColor = Color.FromArgb(58, 99, 232);
-            btnDashboard.IconChar = IconChar.House;
-            btnDashboard.IconColor = Color.FromArgb(58, 99, 232);
-            btnDashboard.IconFont = IconFont.Auto;
-            btnDashboard.IconSize = 18;
-            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(22, 60);
-            btnDashboard.Margin = new Padding(4);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Padding = new Padding(15, 0, 0, 0);
-            btnDashboard.Size = new Size(275, 50);
-            btnDashboard.TabIndex = 5;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // lblMain
-            // 
-            lblMain.AutoSize = true;
-            lblMain.Font = new Font("Poppins", 8F, FontStyle.Bold);
-            lblMain.ForeColor = Color.FromArgb(161, 161, 170);
-            lblMain.Location = new Point(28, 31);
-            lblMain.Margin = new Padding(4, 0, 4, 0);
-            lblMain.Name = "lblMain";
-            lblMain.Size = new Size(50, 25);
-            lblMain.TabIndex = 4;
-            lblMain.Text = "MAIN";
-            // 
             // logoDivider
             // 
             logoDivider.BackColor = Color.FromArgb(236, 230, 222);
-            logoDivider.Location = new Point(0, 110);
+            logoDivider.Location = new Point(0, 105);
             logoDivider.Margin = new Padding(4);
             logoDivider.Name = "logoDivider";
             logoDivider.Size = new Size(325, 1);
@@ -539,7 +226,7 @@ namespace BYTeLog
             sidebarFooterPanel.Controls.Add(lblUserName);
             sidebarFooterPanel.Controls.Add(lblAvatar);
             sidebarFooterPanel.Dock = DockStyle.Bottom;
-            sidebarFooterPanel.Location = new Point(0, 921);
+            sidebarFooterPanel.Location = new Point(0, 616);
             sidebarFooterPanel.Margin = new Padding(4);
             sidebarFooterPanel.Name = "sidebarFooterPanel";
             sidebarFooterPanel.Size = new Size(325, 104);
@@ -601,10 +288,346 @@ namespace BYTeLog
             scrollableNavPanel.Controls.Add(btnMembers);
             scrollableNavPanel.Controls.Add(btnDashboard);
             scrollableNavPanel.Controls.Add(lblMain);
-            scrollableNavPanel.Location = new Point(0, 111);
+            scrollableNavPanel.Location = new Point(0, 104);
             scrollableNavPanel.Name = "scrollableNavPanel";
-            scrollableNavPanel.Size = new Size(325, 505);
+            scrollableNavPanel.Size = new Size(325, 512);
             scrollableNavPanel.TabIndex = 24;
+            // 
+            // btnSettings
+            // 
+            btnSettings.BackColor = Color.White;
+            btnSettings.FlatAppearance.BorderSize = 0;
+            btnSettings.FlatStyle = FlatStyle.Flat;
+            btnSettings.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnSettings.ForeColor = Color.FromArgb(82, 82, 91);
+            btnSettings.IconChar = IconChar.Cog;
+            btnSettings.IconColor = Color.FromArgb(161, 161, 170);
+            btnSettings.IconFont = IconFont.Auto;
+            btnSettings.IconSize = 24;
+            btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSettings.Location = new Point(22, 758);
+            btnSettings.Margin = new Padding(4);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Padding = new Padding(15, 0, 0, 0);
+            btnSettings.Size = new Size(275, 50);
+            btnSettings.TabIndex = 19;
+            btnSettings.Text = "Settings";
+            btnSettings.TextAlign = ContentAlignment.MiddleLeft;
+            btnSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSettings.UseVisualStyleBackColor = false;
+            btnSettings.Click += btnSettings_Click;
+            // 
+            // lblSystem
+            // 
+            lblSystem.AutoSize = true;
+            lblSystem.Font = new Font("Poppins", 8F, FontStyle.Bold);
+            lblSystem.ForeColor = Color.FromArgb(161, 161, 170);
+            lblSystem.Location = new Point(28, 727);
+            lblSystem.Margin = new Padding(4, 0, 4, 0);
+            lblSystem.Name = "lblSystem";
+            lblSystem.Size = new Size(68, 25);
+            lblSystem.TabIndex = 18;
+            lblSystem.Text = "SYSTEM";
+            // 
+            // btnCalendar
+            // 
+            btnCalendar.BackColor = Color.White;
+            btnCalendar.FlatAppearance.BorderSize = 0;
+            btnCalendar.FlatStyle = FlatStyle.Flat;
+            btnCalendar.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnCalendar.ForeColor = Color.FromArgb(82, 82, 91);
+            btnCalendar.IconChar = IconChar.Calendar;
+            btnCalendar.IconColor = Color.FromArgb(161, 161, 170);
+            btnCalendar.IconFont = IconFont.Auto;
+            btnCalendar.IconSize = 26;
+            btnCalendar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCalendar.Location = new Point(22, 658);
+            btnCalendar.Margin = new Padding(4);
+            btnCalendar.Name = "btnCalendar";
+            btnCalendar.Padding = new Padding(15, 0, 0, 0);
+            btnCalendar.Size = new Size(275, 50);
+            btnCalendar.TabIndex = 17;
+            btnCalendar.Text = "Calendar";
+            btnCalendar.TextAlign = ContentAlignment.MiddleLeft;
+            btnCalendar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCalendar.UseVisualStyleBackColor = false;
+            btnCalendar.Click += btnCalendar_Click;
+            // 
+            // btnAuditLog
+            // 
+            btnAuditLog.BackColor = Color.White;
+            btnAuditLog.FlatAppearance.BorderSize = 0;
+            btnAuditLog.FlatStyle = FlatStyle.Flat;
+            btnAuditLog.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnAuditLog.ForeColor = Color.FromArgb(82, 82, 91);
+            btnAuditLog.IconChar = IconChar.ClockRotateLeft;
+            btnAuditLog.IconColor = Color.FromArgb(161, 161, 170);
+            btnAuditLog.IconFont = IconFont.Auto;
+            btnAuditLog.IconSize = 26;
+            btnAuditLog.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAuditLog.Location = new Point(22, 608);
+            btnAuditLog.Margin = new Padding(4);
+            btnAuditLog.Name = "btnAuditLog";
+            btnAuditLog.Padding = new Padding(15, 0, 0, 0);
+            btnAuditLog.Size = new Size(275, 50);
+            btnAuditLog.TabIndex = 16;
+            btnAuditLog.Text = "Audit Log";
+            btnAuditLog.TextAlign = ContentAlignment.MiddleLeft;
+            btnAuditLog.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAuditLog.UseVisualStyleBackColor = false;
+            btnAuditLog.Click += btnAuditLog_Click;
+            // 
+            // btnArchive
+            // 
+            btnArchive.BackColor = Color.White;
+            btnArchive.FlatAppearance.BorderSize = 0;
+            btnArchive.FlatStyle = FlatStyle.Flat;
+            btnArchive.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnArchive.ForeColor = Color.FromArgb(82, 82, 91);
+            btnArchive.IconChar = IconChar.Archive;
+            btnArchive.IconColor = Color.FromArgb(161, 161, 170);
+            btnArchive.IconFont = IconFont.Auto;
+            btnArchive.IconSize = 26;
+            btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
+            btnArchive.Location = new Point(22, 558);
+            btnArchive.Margin = new Padding(4);
+            btnArchive.Name = "btnArchive";
+            btnArchive.Padding = new Padding(15, 0, 0, 0);
+            btnArchive.Size = new Size(275, 50);
+            btnArchive.TabIndex = 15;
+            btnArchive.Text = "Archive";
+            btnArchive.TextAlign = ContentAlignment.MiddleLeft;
+            btnArchive.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnArchive.UseVisualStyleBackColor = false;
+            btnArchive.Click += btnArchive_Click;
+            // 
+            // btnClearance
+            // 
+            btnClearance.BackColor = Color.White;
+            btnClearance.FlatAppearance.BorderSize = 0;
+            btnClearance.FlatStyle = FlatStyle.Flat;
+            btnClearance.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnClearance.ForeColor = Color.FromArgb(82, 82, 91);
+            btnClearance.IconChar = IconChar.CheckCircle;
+            btnClearance.IconColor = Color.FromArgb(161, 161, 170);
+            btnClearance.IconFont = IconFont.Auto;
+            btnClearance.IconSize = 26;
+            btnClearance.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClearance.Location = new Point(25, 508);
+            btnClearance.Margin = new Padding(4);
+            btnClearance.Name = "btnClearance";
+            btnClearance.Padding = new Padding(15, 0, 0, 0);
+            btnClearance.Size = new Size(275, 50);
+            btnClearance.TabIndex = 14;
+            btnClearance.Text = "Clearance";
+            btnClearance.TextAlign = ContentAlignment.MiddleLeft;
+            btnClearance.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnClearance.UseVisualStyleBackColor = false;
+            btnClearance.Click += btnClearance_Click;
+            // 
+            // lblOperations
+            // 
+            lblOperations.AutoSize = true;
+            lblOperations.Font = new Font("Poppins", 8F, FontStyle.Bold);
+            lblOperations.ForeColor = Color.FromArgb(161, 161, 170);
+            lblOperations.Location = new Point(28, 479);
+            lblOperations.Margin = new Padding(4, 0, 4, 0);
+            lblOperations.Name = "lblOperations";
+            lblOperations.Size = new Size(102, 25);
+            lblOperations.TabIndex = 13;
+            lblOperations.Text = "OPERATIONS";
+            // 
+            // btnReports
+            // 
+            btnReports.BackColor = Color.White;
+            btnReports.FlatAppearance.BorderSize = 0;
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnReports.ForeColor = Color.FromArgb(82, 82, 91);
+            btnReports.IconChar = IconChar.FileText;
+            btnReports.IconColor = Color.FromArgb(161, 161, 170);
+            btnReports.IconFont = IconFont.Auto;
+            btnReports.IconSize = 26;
+            btnReports.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReports.Location = new Point(22, 360);
+            btnReports.Margin = new Padding(4);
+            btnReports.Name = "btnReports";
+            btnReports.Padding = new Padding(15, 0, 0, 0);
+            btnReports.Size = new Size(275, 50);
+            btnReports.TabIndex = 12;
+            btnReports.Text = "Reports";
+            btnReports.TextAlign = ContentAlignment.MiddleLeft;
+            btnReports.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReports.UseVisualStyleBackColor = false;
+            btnReports.Click += btnReports_Click;
+            // 
+            // btnFines
+            // 
+            btnFines.BackColor = Color.White;
+            btnFines.FlatAppearance.BorderSize = 0;
+            btnFines.FlatStyle = FlatStyle.Flat;
+            btnFines.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnFines.ForeColor = Color.FromArgb(82, 82, 91);
+            btnFines.IconChar = IconChar.CircleExclamation;
+            btnFines.IconColor = Color.FromArgb(161, 161, 170);
+            btnFines.IconFont = IconFont.Auto;
+            btnFines.IconSize = 26;
+            btnFines.ImageAlign = ContentAlignment.MiddleLeft;
+            btnFines.Location = new Point(22, 410);
+            btnFines.Margin = new Padding(4);
+            btnFines.Name = "btnFines";
+            btnFines.Padding = new Padding(15, 0, 0, 0);
+            btnFines.Size = new Size(275, 50);
+            btnFines.TabIndex = 11;
+            btnFines.Text = "Fines";
+            btnFines.TextAlign = ContentAlignment.MiddleLeft;
+            btnFines.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnFines.UseVisualStyleBackColor = false;
+            btnFines.Click += btnFines_Click;
+            // 
+            // btnPayments
+            // 
+            btnPayments.BackColor = Color.White;
+            btnPayments.FlatAppearance.BorderSize = 0;
+            btnPayments.FlatStyle = FlatStyle.Flat;
+            btnPayments.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnPayments.ForeColor = Color.FromArgb(82, 82, 91);
+            btnPayments.IconChar = IconChar.CreditCard;
+            btnPayments.IconColor = Color.FromArgb(161, 161, 170);
+            btnPayments.IconFont = IconFont.Auto;
+            btnPayments.IconSize = 26;
+            btnPayments.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPayments.Location = new Point(22, 310);
+            btnPayments.Margin = new Padding(4);
+            btnPayments.Name = "btnPayments";
+            btnPayments.Padding = new Padding(15, 0, 0, 0);
+            btnPayments.Size = new Size(275, 50);
+            btnPayments.TabIndex = 10;
+            btnPayments.Text = "Payments";
+            btnPayments.TextAlign = ContentAlignment.MiddleLeft;
+            btnPayments.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPayments.UseVisualStyleBackColor = false;
+            btnPayments.Click += btnPayments_Click;
+            // 
+            // lblFinance
+            // 
+            lblFinance.AutoSize = true;
+            lblFinance.Font = new Font("Poppins", 8F, FontStyle.Bold);
+            lblFinance.ForeColor = Color.FromArgb(161, 161, 170);
+            lblFinance.Location = new Point(28, 279);
+            lblFinance.Margin = new Padding(4, 0, 4, 0);
+            lblFinance.Name = "lblFinance";
+            lblFinance.Size = new Size(75, 25);
+            lblFinance.TabIndex = 9;
+            lblFinance.Text = "FINANCE";
+            // 
+            // btnAttendance
+            // 
+            btnAttendance.BackColor = Color.White;
+            btnAttendance.FlatAppearance.BorderSize = 0;
+            btnAttendance.FlatStyle = FlatStyle.Flat;
+            btnAttendance.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnAttendance.ForeColor = Color.FromArgb(82, 82, 91);
+            btnAttendance.IconChar = IconChar.ClockFour;
+            btnAttendance.IconColor = Color.FromArgb(161, 161, 170);
+            btnAttendance.IconFont = IconFont.Auto;
+            btnAttendance.IconSize = 26;
+            btnAttendance.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAttendance.Location = new Point(22, 210);
+            btnAttendance.Margin = new Padding(4);
+            btnAttendance.Name = "btnAttendance";
+            btnAttendance.Padding = new Padding(15, 0, 0, 0);
+            btnAttendance.Size = new Size(275, 50);
+            btnAttendance.TabIndex = 8;
+            btnAttendance.Text = "Attendance";
+            btnAttendance.TextAlign = ContentAlignment.MiddleLeft;
+            btnAttendance.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAttendance.UseVisualStyleBackColor = false;
+            btnAttendance.Click += btnAttendance_Click;
+            // 
+            // btnActivities
+            // 
+            btnActivities.BackColor = Color.White;
+            btnActivities.FlatAppearance.BorderSize = 0;
+            btnActivities.FlatStyle = FlatStyle.Flat;
+            btnActivities.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnActivities.ForeColor = Color.FromArgb(82, 82, 91);
+            btnActivities.IconChar = IconChar.Calendar;
+            btnActivities.IconColor = Color.FromArgb(161, 161, 170);
+            btnActivities.IconFont = IconFont.Auto;
+            btnActivities.IconSize = 26;
+            btnActivities.ImageAlign = ContentAlignment.MiddleLeft;
+            btnActivities.Location = new Point(22, 160);
+            btnActivities.Margin = new Padding(4);
+            btnActivities.Name = "btnActivities";
+            btnActivities.Padding = new Padding(15, 0, 0, 0);
+            btnActivities.Size = new Size(275, 50);
+            btnActivities.TabIndex = 7;
+            btnActivities.Text = "Activities";
+            btnActivities.TextAlign = ContentAlignment.MiddleLeft;
+            btnActivities.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnActivities.UseVisualStyleBackColor = false;
+            btnActivities.Click += btnActivities_Click;
+            // 
+            // btnMembers
+            // 
+            btnMembers.BackColor = Color.White;
+            btnMembers.FlatAppearance.BorderSize = 0;
+            btnMembers.FlatStyle = FlatStyle.Flat;
+            btnMembers.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnMembers.ForeColor = Color.FromArgb(82, 82, 91);
+            btnMembers.IconChar = IconChar.Users;
+            btnMembers.IconColor = Color.FromArgb(161, 161, 170);
+            btnMembers.IconFont = IconFont.Auto;
+            btnMembers.IconSize = 26;
+            btnMembers.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMembers.Location = new Point(22, 110);
+            btnMembers.Margin = new Padding(4);
+            btnMembers.Name = "btnMembers";
+            btnMembers.Padding = new Padding(15, 0, 0, 0);
+            btnMembers.Size = new Size(275, 50);
+            btnMembers.TabIndex = 6;
+            btnMembers.Text = "Members";
+            btnMembers.TextAlign = ContentAlignment.MiddleLeft;
+            btnMembers.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnMembers.UseVisualStyleBackColor = false;
+            btnMembers.Click += btnMembers_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.FromArgb(233, 239, 255);
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Poppins", 9.5F, FontStyle.Bold);
+            btnDashboard.ForeColor = Color.FromArgb(58, 99, 232);
+            btnDashboard.IconChar = IconChar.House;
+            btnDashboard.IconColor = Color.FromArgb(58, 99, 232);
+            btnDashboard.IconFont = IconFont.Auto;
+            btnDashboard.IconSize = 26;
+            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.Location = new Point(22, 60);
+            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Padding = new Padding(15, 0, 0, 0);
+            btnDashboard.Size = new Size(275, 50);
+            btnDashboard.TabIndex = 5;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // lblMain
+            // 
+            lblMain.AutoSize = true;
+            lblMain.Font = new Font("Poppins", 8F, FontStyle.Bold);
+            lblMain.ForeColor = Color.FromArgb(161, 161, 170);
+            lblMain.Location = new Point(28, 31);
+            lblMain.Margin = new Padding(4, 0, 4, 0);
+            lblMain.Name = "lblMain";
+            lblMain.Size = new Size(50, 25);
+            lblMain.TabIndex = 4;
+            lblMain.Text = "MAIN";
             // 
             // Dashboard
             // 
@@ -669,6 +692,7 @@ namespace BYTeLog
         private System.Windows.Forms.Panel contentPanel;
         private ReaLTaiizor.Controls.Panel panel1;
         private System.Windows.Forms.Panel scrollableNavPanel;
+        private System.Windows.Forms.Panel logoDivider2;
     }
 
 }

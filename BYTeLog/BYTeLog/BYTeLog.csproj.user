@@ -1,8 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ActivitiesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ArchiveView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\AttendanceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\AuditLogView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\CalendarView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ClearanceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\DashboardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FinesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\MembersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\PaymentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ReportsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BYTeLog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e260c47c7be06c05f903b24036305dda2c8d37f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+509b1205dc9b43de428b9c9c7965b37b71fc6bce")]
 [assembly: System.Reflection.AssemblyProductAttribute("BYTeLog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BYTeLog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -22,7 +22,6 @@ C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\B
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\FontAwesome.Sharp.dll
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\bin\Debug\net10.0-windows\ReaLTaiizor.dll
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.csproj.AssemblyReference.cache
-C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\Dashboard.Form1.resources
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Properties.Resources.resources
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.csproj.GenerateResource.cache
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.GeneratedMSBuildEditorConfig.editorconfig
@@ -36,3 +35,18 @@ C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\r
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.pdb
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.genruntimeconfig.cache
 C:\Users\AD\source\repos\ByteLogDUMP\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\ref\BYTeLog.dll
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLogSL.Login.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLogSL.Signup.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Dashboard.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.ActivitiesView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.AttendanceView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.DashboardView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.FinesView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.MembersView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.PaymentsView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.ArchiveView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.AuditLogView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.CalendarView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.ClearanceView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.ReportsView.resources
+C:\Users\AD\source\repos\ByteLogDump\BYTeLog\BYTeLog\obj\Debug\net10.0-windows\BYTeLog.Views.SettingsView.resources
