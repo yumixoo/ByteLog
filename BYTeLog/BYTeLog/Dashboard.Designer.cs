@@ -272,6 +272,7 @@ namespace BYTeLog
             // scrollableNavPanel
             // 
             scrollableNavPanel.AutoScroll = true;
+            scrollableNavPanel.AutoScrollMargin = new Size(0, 20);
             scrollableNavPanel.Controls.Add(btnSettings);
             scrollableNavPanel.Controls.Add(lblSystem);
             scrollableNavPanel.Controls.Add(btnCalendar);
@@ -305,7 +306,7 @@ namespace BYTeLog
             btnSettings.IconFont = IconFont.Auto;
             btnSettings.IconSize = 24;
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(22, 758);
+            btnSettings.Location = new Point(22, 785);
             btnSettings.Margin = new Padding(4);
             btnSettings.Name = "btnSettings";
             btnSettings.Padding = new Padding(15, 0, 0, 0);
@@ -322,7 +323,7 @@ namespace BYTeLog
             lblSystem.AutoSize = true;
             lblSystem.Font = new Font("Poppins", 8F, FontStyle.Bold);
             lblSystem.ForeColor = Color.FromArgb(161, 161, 170);
-            lblSystem.Location = new Point(28, 727);
+            lblSystem.Location = new Point(28, 750);
             lblSystem.Margin = new Padding(4, 0, 4, 0);
             lblSystem.Name = "lblSystem";
             lblSystem.Size = new Size(68, 25);
@@ -341,7 +342,7 @@ namespace BYTeLog
             btnCalendar.IconFont = IconFont.Auto;
             btnCalendar.IconSize = 26;
             btnCalendar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCalendar.Location = new Point(22, 658);
+            btnCalendar.Location = new Point(22, 675);
             btnCalendar.Margin = new Padding(4);
             btnCalendar.Name = "btnCalendar";
             btnCalendar.Padding = new Padding(15, 0, 0, 0);
@@ -365,7 +366,7 @@ namespace BYTeLog
             btnAuditLog.IconFont = IconFont.Auto;
             btnAuditLog.IconSize = 26;
             btnAuditLog.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAuditLog.Location = new Point(22, 608);
+            btnAuditLog.Location = new Point(22, 625);
             btnAuditLog.Margin = new Padding(4);
             btnAuditLog.Name = "btnAuditLog";
             btnAuditLog.Padding = new Padding(15, 0, 0, 0);
@@ -389,7 +390,7 @@ namespace BYTeLog
             btnArchive.IconFont = IconFont.Auto;
             btnArchive.IconSize = 26;
             btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
-            btnArchive.Location = new Point(22, 558);
+            btnArchive.Location = new Point(22, 575);
             btnArchive.Margin = new Padding(4);
             btnArchive.Name = "btnArchive";
             btnArchive.Padding = new Padding(15, 0, 0, 0);
@@ -413,7 +414,7 @@ namespace BYTeLog
             btnClearance.IconFont = IconFont.Auto;
             btnClearance.IconSize = 26;
             btnClearance.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClearance.Location = new Point(25, 508);
+            btnClearance.Location = new Point(22, 525);
             btnClearance.Margin = new Padding(4);
             btnClearance.Name = "btnClearance";
             btnClearance.Padding = new Padding(15, 0, 0, 0);
@@ -430,7 +431,7 @@ namespace BYTeLog
             lblOperations.AutoSize = true;
             lblOperations.Font = new Font("Poppins", 8F, FontStyle.Bold);
             lblOperations.ForeColor = Color.FromArgb(161, 161, 170);
-            lblOperations.Location = new Point(28, 479);
+            lblOperations.Location = new Point(28, 490);
             lblOperations.Margin = new Padding(4, 0, 4, 0);
             lblOperations.Name = "lblOperations";
             lblOperations.Size = new Size(102, 25);
@@ -449,7 +450,7 @@ namespace BYTeLog
             btnReports.IconFont = IconFont.Auto;
             btnReports.IconSize = 26;
             btnReports.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReports.Location = new Point(22, 360);
+            btnReports.Location = new Point(22, 365);
             btnReports.Margin = new Padding(4);
             btnReports.Name = "btnReports";
             btnReports.Padding = new Padding(15, 0, 0, 0);
@@ -473,7 +474,7 @@ namespace BYTeLog
             btnFines.IconFont = IconFont.Auto;
             btnFines.IconSize = 26;
             btnFines.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFines.Location = new Point(22, 410);
+            btnFines.Location = new Point(22, 415);
             btnFines.Margin = new Padding(4);
             btnFines.Name = "btnFines";
             btnFines.Padding = new Padding(15, 0, 0, 0);
@@ -497,7 +498,7 @@ namespace BYTeLog
             btnPayments.IconFont = IconFont.Auto;
             btnPayments.IconSize = 26;
             btnPayments.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPayments.Location = new Point(22, 310);
+            btnPayments.Location = new Point(22, 315);
             btnPayments.Margin = new Padding(4);
             btnPayments.Name = "btnPayments";
             btnPayments.Padding = new Padding(15, 0, 0, 0);
@@ -514,7 +515,7 @@ namespace BYTeLog
             lblFinance.AutoSize = true;
             lblFinance.Font = new Font("Poppins", 8F, FontStyle.Bold);
             lblFinance.ForeColor = Color.FromArgb(161, 161, 170);
-            lblFinance.Location = new Point(28, 279);
+            lblFinance.Location = new Point(28, 280);
             lblFinance.Margin = new Padding(4, 0, 4, 0);
             lblFinance.Name = "lblFinance";
             lblFinance.Size = new Size(75, 25);
@@ -533,7 +534,7 @@ namespace BYTeLog
             btnAttendance.IconFont = IconFont.Auto;
             btnAttendance.IconSize = 26;
             btnAttendance.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAttendance.Location = new Point(22, 210);
+            btnAttendance.Location = new Point(22, 205);
             btnAttendance.Margin = new Padding(4);
             btnAttendance.Name = "btnAttendance";
             btnAttendance.Padding = new Padding(15, 0, 0, 0);
@@ -557,7 +558,7 @@ namespace BYTeLog
             btnActivities.IconFont = IconFont.Auto;
             btnActivities.IconSize = 26;
             btnActivities.ImageAlign = ContentAlignment.MiddleLeft;
-            btnActivities.Location = new Point(22, 160);
+            btnActivities.Location = new Point(22, 155);
             btnActivities.Margin = new Padding(4);
             btnActivities.Name = "btnActivities";
             btnActivities.Padding = new Padding(15, 0, 0, 0);
@@ -581,7 +582,7 @@ namespace BYTeLog
             btnMembers.IconFont = IconFont.Auto;
             btnMembers.IconSize = 26;
             btnMembers.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMembers.Location = new Point(22, 110);
+            btnMembers.Location = new Point(22, 105);
             btnMembers.Margin = new Padding(4);
             btnMembers.Name = "btnMembers";
             btnMembers.Padding = new Padding(15, 0, 0, 0);
@@ -605,7 +606,7 @@ namespace BYTeLog
             btnDashboard.IconFont = IconFont.Auto;
             btnDashboard.IconSize = 26;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(22, 60);
+            btnDashboard.Location = new Point(22, 55);
             btnDashboard.Margin = new Padding(4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(15, 0, 0, 0);
@@ -622,7 +623,7 @@ namespace BYTeLog
             lblMain.AutoSize = true;
             lblMain.Font = new Font("Poppins", 8F, FontStyle.Bold);
             lblMain.ForeColor = Color.FromArgb(161, 161, 170);
-            lblMain.Location = new Point(28, 31);
+            lblMain.Location = new Point(28, 20);
             lblMain.Margin = new Padding(4, 0, 4, 0);
             lblMain.Name = "lblMain";
             lblMain.Size = new Size(50, 25);
