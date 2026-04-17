@@ -130,19 +130,19 @@ namespace BYTeLog.Views
             btnGoToSettings = new IconButton();
             dividerPol = new Panel();
             pnlPolTile1 = new Panel();
+            lblPolTile1Applied = new Label();
             pnlPolTile1Accent = new Panel();
             iconPolTile1 = new IconPictureBox();
             lblPolTile1Name = new Label();
             lblPolTile1Type = new Label();
             lblPolTile1Amount = new Label();
-            lblPolTile1Applied = new Label();
             pnlPolTile2 = new Panel();
+            lblPolTile2Applied = new Label();
             pnlPolTile2Accent = new Panel();
             iconPolTile2 = new IconPictureBox();
             lblPolTile2Name = new Label();
             lblPolTile2Type = new Label();
             lblPolTile2Amount = new Label();
-            lblPolTile2Applied = new Label();
             pnlPolTile3 = new Panel();
             pnlPolTile3Accent = new Panel();
             iconPolTile3 = new IconPictureBox();
@@ -1322,6 +1322,7 @@ namespace BYTeLog.Views
             btnGoToSettings.TextAlign = ContentAlignment.MiddleLeft;
             btnGoToSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGoToSettings.UseVisualStyleBackColor = false;
+            btnGoToSettings.Click += btnGoToSettings_Click;
             // 
             // dividerPol
             // 
@@ -1344,6 +1345,17 @@ namespace BYTeLog.Views
             pnlPolTile1.Name = "pnlPolTile1";
             pnlPolTile1.Size = new Size(818, 150);
             pnlPolTile1.TabIndex = 4;
+            // 
+            // lblPolTile1Applied
+            // 
+            lblPolTile1Applied.AutoSize = true;
+            lblPolTile1Applied.Font = new Font("Poppins", 8.5F);
+            lblPolTile1Applied.ForeColor = Color.FromArgb(161, 161, 170);
+            lblPolTile1Applied.Location = new Point(584, 121);
+            lblPolTile1Applied.Name = "lblPolTile1Applied";
+            lblPolTile1Applied.Size = new Size(231, 26);
+            lblPolTile1Applied.TabIndex = 5;
+            lblPolTile1Applied.Text = "Applied 0 times this semester";
             // 
             // pnlPolTile1Accent
             // 
@@ -1400,17 +1412,6 @@ namespace BYTeLog.Views
             lblPolTile1Amount.TabIndex = 4;
             lblPolTile1Amount.Text = "₱50.00";
             // 
-            // lblPolTile1Applied
-            // 
-            lblPolTile1Applied.AutoSize = true;
-            lblPolTile1Applied.Font = new Font("Poppins", 8.5F);
-            lblPolTile1Applied.ForeColor = Color.FromArgb(161, 161, 170);
-            lblPolTile1Applied.Location = new Point(584, 121);
-            lblPolTile1Applied.Name = "lblPolTile1Applied";
-            lblPolTile1Applied.Size = new Size(231, 26);
-            lblPolTile1Applied.TabIndex = 5;
-            lblPolTile1Applied.Text = "Applied 0 times this semester";
-            // 
             // pnlPolTile2
             // 
             pnlPolTile2.BackColor = Color.FromArgb(250, 250, 252);
@@ -1424,6 +1425,17 @@ namespace BYTeLog.Views
             pnlPolTile2.Name = "pnlPolTile2";
             pnlPolTile2.Size = new Size(818, 150);
             pnlPolTile2.TabIndex = 5;
+            // 
+            // lblPolTile2Applied
+            // 
+            lblPolTile2Applied.AutoSize = true;
+            lblPolTile2Applied.Font = new Font("Poppins", 8.5F);
+            lblPolTile2Applied.ForeColor = Color.FromArgb(161, 161, 170);
+            lblPolTile2Applied.Location = new Point(584, 121);
+            lblPolTile2Applied.Name = "lblPolTile2Applied";
+            lblPolTile2Applied.Size = new Size(231, 26);
+            lblPolTile2Applied.TabIndex = 5;
+            lblPolTile2Applied.Text = "Applied 0 times this semester";
             // 
             // pnlPolTile2Accent
             // 
@@ -1479,17 +1491,6 @@ namespace BYTeLog.Views
             lblPolTile2Amount.Size = new Size(135, 53);
             lblPolTile2Amount.TabIndex = 4;
             lblPolTile2Amount.Text = "₱50.00";
-            // 
-            // lblPolTile2Applied
-            // 
-            lblPolTile2Applied.AutoSize = true;
-            lblPolTile2Applied.Font = new Font("Poppins", 8.5F);
-            lblPolTile2Applied.ForeColor = Color.FromArgb(161, 161, 170);
-            lblPolTile2Applied.Location = new Point(584, 121);
-            lblPolTile2Applied.Name = "lblPolTile2Applied";
-            lblPolTile2Applied.Size = new Size(231, 26);
-            lblPolTile2Applied.TabIndex = 5;
-            lblPolTile2Applied.Text = "Applied 0 times this semester";
             // 
             // pnlPolTile3
             // 
