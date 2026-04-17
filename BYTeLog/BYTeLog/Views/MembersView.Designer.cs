@@ -85,7 +85,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(462, 125);
             panel4.TabIndex = 3;
-            panel4.Paint += panel4_Paint;
             // 
             // panel5
             // 
@@ -194,7 +193,6 @@
             textBox7.TabIndex = 2;
             textBox7.Text = "Upcoming Activities";
             textBox7.TextAlign = HorizontalAlignment.Center;
-            textBox7.TextChanged += textBox7_TextChanged;
             // 
             // textBox8
             // 
