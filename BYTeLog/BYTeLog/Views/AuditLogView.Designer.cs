@@ -36,25 +36,25 @@ namespace BYTeLog.Views
             innerContentPanel = new Panel();
             cardStats = new Panel();
             statCardTotal = new Panel();
+            lblStatTotalLabel = new Label();
             pnlStatTotalIcon = new Panel();
             iconStatTotal = new IconPictureBox();
             lblStatTotalCount = new Label();
-            lblStatTotalLabel = new Label();
             statCardToday = new Panel();
+            lblStatTodayLabel = new Label();
             pnlStatTodayIcon = new Panel();
             iconStatToday = new IconPictureBox();
             lblStatTodayCount = new Label();
-            lblStatTodayLabel = new Label();
             statCardUsers = new Panel();
+            lblStatUsersLabel = new Label();
             pnlStatUsersIcon = new Panel();
             iconStatUsers = new IconPictureBox();
             lblStatUsersCount = new Label();
-            lblStatUsersLabel = new Label();
             statCardWarnings = new Panel();
+            lblStatWarningsLabel = new Label();
             pnlStatWarningsIcon = new Panel();
             iconStatWarnings = new IconPictureBox();
             lblStatWarningsCount = new Label();
-            lblStatWarningsLabel = new Label();
             cardFilter = new Panel();
             pnlFilterIconBox = new Panel();
             iconFilter = new IconPictureBox();
@@ -147,7 +147,7 @@ namespace BYTeLog.Views
             outerScrollPanel.Dock = DockStyle.Fill;
             outerScrollPanel.Location = new Point(0, 0);
             outerScrollPanel.Name = "outerScrollPanel";
-            outerScrollPanel.Size = new Size(955, 615);
+            outerScrollPanel.Size = new Size(955, 1580);
             outerScrollPanel.TabIndex = 0;
             // 
             // innerContentPanel
@@ -186,6 +186,17 @@ namespace BYTeLog.Views
             statCardTotal.Size = new Size(208, 88);
             statCardTotal.TabIndex = 0;
             // 
+            // lblStatTotalLabel
+            // 
+            lblStatTotalLabel.AutoSize = true;
+            lblStatTotalLabel.Font = new Font("Poppins", 8F);
+            lblStatTotalLabel.ForeColor = Color.FromArgb(122, 122, 128);
+            lblStatTotalLabel.Location = new Point(72, 52);
+            lblStatTotalLabel.Name = "lblStatTotalLabel";
+            lblStatTotalLabel.Size = new Size(81, 25);
+            lblStatTotalLabel.TabIndex = 2;
+            lblStatTotalLabel.Text = "Total Logs";
+            // 
             // pnlStatTotalIcon
             // 
             pnlStatTotalIcon.BackColor = Color.FromArgb(233, 239, 255);
@@ -220,17 +231,6 @@ namespace BYTeLog.Views
             lblStatTotalCount.TabIndex = 1;
             lblStatTotalCount.Text = "0";
             // 
-            // lblStatTotalLabel
-            // 
-            lblStatTotalLabel.AutoSize = true;
-            lblStatTotalLabel.Font = new Font("Poppins", 8F);
-            lblStatTotalLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatTotalLabel.Location = new Point(72, 52);
-            lblStatTotalLabel.Name = "lblStatTotalLabel";
-            lblStatTotalLabel.Size = new Size(81, 25);
-            lblStatTotalLabel.TabIndex = 2;
-            lblStatTotalLabel.Text = "Total Logs";
-            // 
             // statCardToday
             // 
             statCardToday.BackColor = Color.White;
@@ -241,6 +241,17 @@ namespace BYTeLog.Views
             statCardToday.Name = "statCardToday";
             statCardToday.Size = new Size(208, 88);
             statCardToday.TabIndex = 1;
+            // 
+            // lblStatTodayLabel
+            // 
+            lblStatTodayLabel.AutoSize = true;
+            lblStatTodayLabel.Font = new Font("Poppins", 8F);
+            lblStatTodayLabel.ForeColor = Color.FromArgb(122, 122, 128);
+            lblStatTodayLabel.Location = new Point(72, 52);
+            lblStatTodayLabel.Name = "lblStatTodayLabel";
+            lblStatTodayLabel.Size = new Size(119, 25);
+            lblStatTodayLabel.TabIndex = 2;
+            lblStatTodayLabel.Text = "Today's Actions";
             // 
             // pnlStatTodayIcon
             // 
@@ -276,17 +287,6 @@ namespace BYTeLog.Views
             lblStatTodayCount.TabIndex = 1;
             lblStatTodayCount.Text = "0";
             // 
-            // lblStatTodayLabel
-            // 
-            lblStatTodayLabel.AutoSize = true;
-            lblStatTodayLabel.Font = new Font("Poppins", 8F);
-            lblStatTodayLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatTodayLabel.Location = new Point(72, 52);
-            lblStatTodayLabel.Name = "lblStatTodayLabel";
-            lblStatTodayLabel.Size = new Size(119, 25);
-            lblStatTodayLabel.TabIndex = 2;
-            lblStatTodayLabel.Text = "Today's Actions";
-            // 
             // statCardUsers
             // 
             statCardUsers.BackColor = Color.White;
@@ -297,6 +297,17 @@ namespace BYTeLog.Views
             statCardUsers.Name = "statCardUsers";
             statCardUsers.Size = new Size(208, 88);
             statCardUsers.TabIndex = 2;
+            // 
+            // lblStatUsersLabel
+            // 
+            lblStatUsersLabel.AutoSize = true;
+            lblStatUsersLabel.Font = new Font("Poppins", 8F);
+            lblStatUsersLabel.ForeColor = Color.FromArgb(122, 122, 128);
+            lblStatUsersLabel.Location = new Point(72, 52);
+            lblStatUsersLabel.Name = "lblStatUsersLabel";
+            lblStatUsersLabel.Size = new Size(96, 25);
+            lblStatUsersLabel.TabIndex = 2;
+            lblStatUsersLabel.Text = "Active Users";
             // 
             // pnlStatUsersIcon
             // 
@@ -332,17 +343,6 @@ namespace BYTeLog.Views
             lblStatUsersCount.TabIndex = 1;
             lblStatUsersCount.Text = "0";
             // 
-            // lblStatUsersLabel
-            // 
-            lblStatUsersLabel.AutoSize = true;
-            lblStatUsersLabel.Font = new Font("Poppins", 8F);
-            lblStatUsersLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatUsersLabel.Location = new Point(72, 52);
-            lblStatUsersLabel.Name = "lblStatUsersLabel";
-            lblStatUsersLabel.Size = new Size(96, 25);
-            lblStatUsersLabel.TabIndex = 2;
-            lblStatUsersLabel.Text = "Active Users";
-            // 
             // statCardWarnings
             // 
             statCardWarnings.BackColor = Color.White;
@@ -353,6 +353,17 @@ namespace BYTeLog.Views
             statCardWarnings.Name = "statCardWarnings";
             statCardWarnings.Size = new Size(212, 88);
             statCardWarnings.TabIndex = 3;
+            // 
+            // lblStatWarningsLabel
+            // 
+            lblStatWarningsLabel.AutoSize = true;
+            lblStatWarningsLabel.Font = new Font("Poppins", 8F);
+            lblStatWarningsLabel.ForeColor = Color.FromArgb(122, 122, 128);
+            lblStatWarningsLabel.Location = new Point(72, 52);
+            lblStatWarningsLabel.Name = "lblStatWarningsLabel";
+            lblStatWarningsLabel.Size = new Size(107, 25);
+            lblStatWarningsLabel.TabIndex = 2;
+            lblStatWarningsLabel.Text = "Failed Actions";
             // 
             // pnlStatWarningsIcon
             // 
@@ -387,17 +398,6 @@ namespace BYTeLog.Views
             lblStatWarningsCount.Size = new Size(35, 44);
             lblStatWarningsCount.TabIndex = 1;
             lblStatWarningsCount.Text = "0";
-            // 
-            // lblStatWarningsLabel
-            // 
-            lblStatWarningsLabel.AutoSize = true;
-            lblStatWarningsLabel.Font = new Font("Poppins", 8F);
-            lblStatWarningsLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatWarningsLabel.Location = new Point(72, 52);
-            lblStatWarningsLabel.Name = "lblStatWarningsLabel";
-            lblStatWarningsLabel.Size = new Size(107, 25);
-            lblStatWarningsLabel.TabIndex = 2;
-            lblStatWarningsLabel.Text = "Failed Actions";
             // 
             // cardFilter
             // 
@@ -1102,7 +1102,7 @@ namespace BYTeLog.Views
             BackColor = Color.FromArgb(244, 239, 231);
             Controls.Add(outerScrollPanel);
             Name = "AuditLogView";
-            Size = new Size(955, 615);
+            Size = new Size(955, 1580);
             outerScrollPanel.ResumeLayout(false);
             innerContentPanel.ResumeLayout(false);
             cardStats.ResumeLayout(false);
