@@ -31,6 +31,7 @@ namespace BYTeLog.Views
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             outerScrollPanel = new Panel();
             innerContentPanel = new Panel();
@@ -56,6 +57,8 @@ namespace BYTeLog.Views
             iconStatWarnings = new IconPictureBox();
             lblStatWarningsCount = new Label();
             cardFilter = new Panel();
+            btnResetFilter = new IconButton();
+            btnApplyFilter = new IconButton();
             pnlFilterIconBox = new Panel();
             iconFilter = new IconPictureBox();
             lblFilterTitle = new Label();
@@ -71,10 +74,8 @@ namespace BYTeLog.Views
             cmbModule = new ComboBox();
             lblActionType = new Label();
             cmbActionType = new ComboBox();
-            lblUser = new Label();
-            cmbUser = new ComboBox();
-            btnApplyFilter = new IconButton();
-            btnResetFilter = new IconButton();
+            lblFilterUser = new Label();
+            cmbFilterUser = new ComboBox();
             cardLogTable = new Panel();
             pnlLogIconBox = new Panel();
             iconLog = new IconPictureBox();
@@ -91,11 +92,12 @@ namespace BYTeLog.Views
             colModule = new DataGridViewTextBoxColumn();
             colDescription = new DataGridViewTextBoxColumn();
             colStatus = new DataGridViewTextBoxColumn();
-            colDetails = new DataGridViewButtonColumn();
+            colView = new DataGridViewButtonColumn();
             cardDetail = new Panel();
             pnlDetailIconBox = new Panel();
             iconDetail = new IconPictureBox();
             lblDetailTitle = new Label();
+            btnCloseDetail = new IconButton();
             dividerDetail = new Panel();
             lblDetailTimestampLbl = new Label();
             lblDetailTimestamp = new Label();
@@ -141,13 +143,13 @@ namespace BYTeLog.Views
             // outerScrollPanel
             // 
             outerScrollPanel.AutoScroll = true;
-            outerScrollPanel.AutoScrollMinSize = new Size(0, 1580);
+            outerScrollPanel.AutoScrollMinSize = new Size(0, 1480);
             outerScrollPanel.BackColor = Color.FromArgb(244, 239, 231);
             outerScrollPanel.Controls.Add(innerContentPanel);
             outerScrollPanel.Dock = DockStyle.Fill;
             outerScrollPanel.Location = new Point(0, 0);
             outerScrollPanel.Name = "outerScrollPanel";
-            outerScrollPanel.Size = new Size(955, 1580);
+            outerScrollPanel.Size = new Size(955, 770);
             outerScrollPanel.TabIndex = 0;
             // 
             // innerContentPanel
@@ -160,7 +162,7 @@ namespace BYTeLog.Views
             innerContentPanel.Location = new Point(0, 0);
             innerContentPanel.Name = "innerContentPanel";
             innerContentPanel.Padding = new Padding(30);
-            innerContentPanel.Size = new Size(934, 1577);
+            innerContentPanel.Size = new Size(934, 1480);
             innerContentPanel.TabIndex = 0;
             // 
             // cardStats
@@ -191,7 +193,7 @@ namespace BYTeLog.Views
             lblStatTotalLabel.AutoSize = true;
             lblStatTotalLabel.Font = new Font("Poppins", 8F);
             lblStatTotalLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatTotalLabel.Location = new Point(72, 52);
+            lblStatTotalLabel.Location = new Point(71, 50);
             lblStatTotalLabel.Name = "lblStatTotalLabel";
             lblStatTotalLabel.Size = new Size(81, 25);
             lblStatTotalLabel.TabIndex = 2;
@@ -225,7 +227,7 @@ namespace BYTeLog.Views
             lblStatTotalCount.AutoSize = true;
             lblStatTotalCount.Font = new Font("Poppins", 15F, FontStyle.Bold);
             lblStatTotalCount.ForeColor = Color.FromArgb(20, 20, 20);
-            lblStatTotalCount.Location = new Point(70, 16);
+            lblStatTotalCount.Location = new Point(70, 14);
             lblStatTotalCount.Name = "lblStatTotalCount";
             lblStatTotalCount.Size = new Size(35, 44);
             lblStatTotalCount.TabIndex = 1;
@@ -237,7 +239,7 @@ namespace BYTeLog.Views
             statCardToday.Controls.Add(lblStatTodayLabel);
             statCardToday.Controls.Add(pnlStatTodayIcon);
             statCardToday.Controls.Add(lblStatTodayCount);
-            statCardToday.Location = new Point(222, 0);
+            statCardToday.Location = new Point(224, 0);
             statCardToday.Name = "statCardToday";
             statCardToday.Size = new Size(208, 88);
             statCardToday.TabIndex = 1;
@@ -247,7 +249,7 @@ namespace BYTeLog.Views
             lblStatTodayLabel.AutoSize = true;
             lblStatTodayLabel.Font = new Font("Poppins", 8F);
             lblStatTodayLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatTodayLabel.Location = new Point(72, 52);
+            lblStatTodayLabel.Location = new Point(71, 50);
             lblStatTodayLabel.Name = "lblStatTodayLabel";
             lblStatTodayLabel.Size = new Size(119, 25);
             lblStatTodayLabel.TabIndex = 2;
@@ -281,7 +283,7 @@ namespace BYTeLog.Views
             lblStatTodayCount.AutoSize = true;
             lblStatTodayCount.Font = new Font("Poppins", 15F, FontStyle.Bold);
             lblStatTodayCount.ForeColor = Color.FromArgb(20, 20, 20);
-            lblStatTodayCount.Location = new Point(70, 16);
+            lblStatTodayCount.Location = new Point(70, 14);
             lblStatTodayCount.Name = "lblStatTodayCount";
             lblStatTodayCount.Size = new Size(35, 44);
             lblStatTodayCount.TabIndex = 1;
@@ -293,7 +295,7 @@ namespace BYTeLog.Views
             statCardUsers.Controls.Add(lblStatUsersLabel);
             statCardUsers.Controls.Add(pnlStatUsersIcon);
             statCardUsers.Controls.Add(lblStatUsersCount);
-            statCardUsers.Location = new Point(444, 0);
+            statCardUsers.Location = new Point(448, 0);
             statCardUsers.Name = "statCardUsers";
             statCardUsers.Size = new Size(208, 88);
             statCardUsers.TabIndex = 2;
@@ -303,7 +305,7 @@ namespace BYTeLog.Views
             lblStatUsersLabel.AutoSize = true;
             lblStatUsersLabel.Font = new Font("Poppins", 8F);
             lblStatUsersLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatUsersLabel.Location = new Point(72, 52);
+            lblStatUsersLabel.Location = new Point(71, 50);
             lblStatUsersLabel.Name = "lblStatUsersLabel";
             lblStatUsersLabel.Size = new Size(96, 25);
             lblStatUsersLabel.TabIndex = 2;
@@ -337,7 +339,7 @@ namespace BYTeLog.Views
             lblStatUsersCount.AutoSize = true;
             lblStatUsersCount.Font = new Font("Poppins", 15F, FontStyle.Bold);
             lblStatUsersCount.ForeColor = Color.FromArgb(20, 20, 20);
-            lblStatUsersCount.Location = new Point(70, 16);
+            lblStatUsersCount.Location = new Point(70, 14);
             lblStatUsersCount.Name = "lblStatUsersCount";
             lblStatUsersCount.Size = new Size(35, 44);
             lblStatUsersCount.TabIndex = 1;
@@ -349,9 +351,9 @@ namespace BYTeLog.Views
             statCardWarnings.Controls.Add(lblStatWarningsLabel);
             statCardWarnings.Controls.Add(pnlStatWarningsIcon);
             statCardWarnings.Controls.Add(lblStatWarningsCount);
-            statCardWarnings.Location = new Point(666, 0);
+            statCardWarnings.Location = new Point(670, 0);
             statCardWarnings.Name = "statCardWarnings";
-            statCardWarnings.Size = new Size(212, 88);
+            statCardWarnings.Size = new Size(208, 88);
             statCardWarnings.TabIndex = 3;
             // 
             // lblStatWarningsLabel
@@ -359,7 +361,7 @@ namespace BYTeLog.Views
             lblStatWarningsLabel.AutoSize = true;
             lblStatWarningsLabel.Font = new Font("Poppins", 8F);
             lblStatWarningsLabel.ForeColor = Color.FromArgb(122, 122, 128);
-            lblStatWarningsLabel.Location = new Point(72, 52);
+            lblStatWarningsLabel.Location = new Point(71, 50);
             lblStatWarningsLabel.Name = "lblStatWarningsLabel";
             lblStatWarningsLabel.Size = new Size(107, 25);
             lblStatWarningsLabel.TabIndex = 2;
@@ -393,7 +395,7 @@ namespace BYTeLog.Views
             lblStatWarningsCount.AutoSize = true;
             lblStatWarningsCount.Font = new Font("Poppins", 15F, FontStyle.Bold);
             lblStatWarningsCount.ForeColor = Color.FromArgb(20, 20, 20);
-            lblStatWarningsCount.Location = new Point(70, 16);
+            lblStatWarningsCount.Location = new Point(70, 14);
             lblStatWarningsCount.Name = "lblStatWarningsCount";
             lblStatWarningsCount.Size = new Size(35, 44);
             lblStatWarningsCount.TabIndex = 1;
@@ -402,6 +404,8 @@ namespace BYTeLog.Views
             // cardFilter
             // 
             cardFilter.BackColor = Color.White;
+            cardFilter.Controls.Add(btnResetFilter);
+            cardFilter.Controls.Add(btnApplyFilter);
             cardFilter.Controls.Add(pnlFilterIconBox);
             cardFilter.Controls.Add(lblFilterTitle);
             cardFilter.Controls.Add(dividerFilter);
@@ -414,15 +418,59 @@ namespace BYTeLog.Views
             cardFilter.Controls.Add(cmbModule);
             cardFilter.Controls.Add(lblActionType);
             cardFilter.Controls.Add(cmbActionType);
-            cardFilter.Controls.Add(lblUser);
-            cardFilter.Controls.Add(cmbUser);
-            cardFilter.Controls.Add(btnApplyFilter);
-            cardFilter.Controls.Add(btnResetFilter);
+            cardFilter.Controls.Add(lblFilterUser);
+            cardFilter.Controls.Add(cmbFilterUser);
             cardFilter.Location = new Point(30, 140);
             cardFilter.Name = "cardFilter";
             cardFilter.Padding = new Padding(28, 24, 28, 28);
-            cardFilter.Size = new Size(878, 240);
+            cardFilter.Size = new Size(878, 250);
             cardFilter.TabIndex = 1;
+            // 
+            // btnResetFilter
+            // 
+            btnResetFilter.BackColor = Color.White;
+            btnResetFilter.FlatAppearance.BorderColor = Color.FromArgb(200, 195, 188);
+            btnResetFilter.FlatStyle = FlatStyle.Flat;
+            btnResetFilter.Font = new Font("Poppins", 9F, FontStyle.Bold);
+            btnResetFilter.ForeColor = Color.FromArgb(122, 122, 128);
+            btnResetFilter.IconChar = IconChar.RotateBack;
+            btnResetFilter.IconColor = Color.FromArgb(122, 122, 128);
+            btnResetFilter.IconFont = IconFont.Auto;
+            btnResetFilter.IconSize = 16;
+            btnResetFilter.ImageAlign = ContentAlignment.MiddleLeft;
+            btnResetFilter.Location = new Point(746, 209);
+            btnResetFilter.Name = "btnResetFilter";
+            btnResetFilter.Padding = new Padding(10, 0, 0, 0);
+            btnResetFilter.Size = new Size(104, 36);
+            btnResetFilter.TabIndex = 15;
+            btnResetFilter.Text = "Reset";
+            btnResetFilter.TextAlign = ContentAlignment.MiddleLeft;
+            btnResetFilter.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnResetFilter.UseVisualStyleBackColor = false;
+            btnResetFilter.Click += btnResetFilter_Click;
+            // 
+            // btnApplyFilter
+            // 
+            btnApplyFilter.BackColor = Color.FromArgb(58, 99, 232);
+            btnApplyFilter.FlatAppearance.BorderSize = 0;
+            btnApplyFilter.FlatStyle = FlatStyle.Flat;
+            btnApplyFilter.Font = new Font("Poppins", 9F, FontStyle.Bold);
+            btnApplyFilter.ForeColor = Color.White;
+            btnApplyFilter.IconChar = IconChar.Search;
+            btnApplyFilter.IconColor = Color.White;
+            btnApplyFilter.IconFont = IconFont.Auto;
+            btnApplyFilter.IconSize = 16;
+            btnApplyFilter.ImageAlign = ContentAlignment.MiddleLeft;
+            btnApplyFilter.Location = new Point(588, 210);
+            btnApplyFilter.Name = "btnApplyFilter";
+            btnApplyFilter.Padding = new Padding(10, 0, 0, 0);
+            btnApplyFilter.Size = new Size(148, 36);
+            btnApplyFilter.TabIndex = 14;
+            btnApplyFilter.Text = "Apply Filter";
+            btnApplyFilter.TextAlign = ContentAlignment.MiddleLeft;
+            btnApplyFilter.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnApplyFilter.UseVisualStyleBackColor = false;
+            btnApplyFilter.Click += btnApplyFilter_Click;
             // 
             // pnlFilterIconBox
             // 
@@ -472,7 +520,7 @@ namespace BYTeLog.Views
             pnlSearchBox.BorderStyle = BorderStyle.FixedSingle;
             pnlSearchBox.Controls.Add(iconSearch);
             pnlSearchBox.Controls.Add(txtSearch);
-            pnlSearchBox.Location = new Point(28, 92);
+            pnlSearchBox.Location = new Point(28, 90);
             pnlSearchBox.Name = "pnlSearchBox";
             pnlSearchBox.Size = new Size(822, 34);
             pnlSearchBox.TabIndex = 3;
@@ -480,12 +528,12 @@ namespace BYTeLog.Views
             // iconSearch
             // 
             iconSearch.BackColor = Color.Transparent;
-            iconSearch.ForeColor = Color.FromArgb(160, 160, 168);
+            iconSearch.ForeColor = Color.FromArgb(122, 122, 128);
             iconSearch.IconChar = IconChar.Search;
-            iconSearch.IconColor = Color.FromArgb(160, 160, 168);
+            iconSearch.IconColor = Color.FromArgb(122, 122, 128);
             iconSearch.IconFont = IconFont.Auto;
             iconSearch.IconSize = 16;
-            iconSearch.Location = new Point(8, 8);
+            iconSearch.Location = new Point(8, 7);
             iconSearch.Name = "iconSearch";
             iconSearch.Size = new Size(16, 16);
             iconSearch.TabIndex = 0;
@@ -495,20 +543,21 @@ namespace BYTeLog.Views
             // 
             txtSearch.BackColor = Color.FromArgb(250, 250, 252);
             txtSearch.BorderStyle = BorderStyle.None;
-            txtSearch.Font = new Font("Poppins", 9.5F);
-            txtSearch.ForeColor = Color.FromArgb(20, 20, 20);
+            txtSearch.Font = new Font("Poppins", 9F);
+            txtSearch.ForeColor = Color.FromArgb(52, 52, 58);
             txtSearch.Location = new Point(32, 6);
             txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Search by description, user, or module…";
-            txtSearch.Size = new Size(780, 24);
+            txtSearch.PlaceholderText = "Search by keyword, user, description…";
+            txtSearch.Size = new Size(780, 23);
             txtSearch.TabIndex = 1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // lblDateFrom
             // 
             lblDateFrom.AutoSize = true;
             lblDateFrom.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDateFrom.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDateFrom.Location = new Point(31, 142);
+            lblDateFrom.Location = new Point(31, 138);
             lblDateFrom.Name = "lblDateFrom";
             lblDateFrom.Size = new Size(91, 26);
             lblDateFrom.TabIndex = 4;
@@ -518,17 +567,18 @@ namespace BYTeLog.Views
             // 
             dtpDateFrom.Font = new Font("Poppins", 9.5F);
             dtpDateFrom.Format = DateTimePickerFormat.Short;
-            dtpDateFrom.Location = new Point(28, 170);
+            dtpDateFrom.Location = new Point(28, 164);
             dtpDateFrom.Name = "dtpDateFrom";
-            dtpDateFrom.Size = new Size(148, 31);
+            dtpDateFrom.Size = new Size(176, 31);
             dtpDateFrom.TabIndex = 5;
+            dtpDateFrom.ValueChanged += dtpDateFrom_ValueChanged;
             // 
             // lblDateTo
             // 
             lblDateTo.AutoSize = true;
             lblDateTo.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDateTo.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDateTo.Location = new Point(191, 142);
+            lblDateTo.Location = new Point(218, 138);
             lblDateTo.Name = "lblDateTo";
             lblDateTo.Size = new Size(70, 26);
             lblDateTo.TabIndex = 6;
@@ -538,17 +588,18 @@ namespace BYTeLog.Views
             // 
             dtpDateTo.Font = new Font("Poppins", 9.5F);
             dtpDateTo.Format = DateTimePickerFormat.Short;
-            dtpDateTo.Location = new Point(188, 170);
+            dtpDateTo.Location = new Point(214, 164);
             dtpDateTo.Name = "dtpDateTo";
-            dtpDateTo.Size = new Size(148, 31);
+            dtpDateTo.Size = new Size(176, 31);
             dtpDateTo.TabIndex = 7;
+            dtpDateTo.ValueChanged += dtpDateTo_ValueChanged;
             // 
             // lblModule
             // 
             lblModule.AutoSize = true;
             lblModule.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblModule.ForeColor = Color.FromArgb(52, 52, 58);
-            lblModule.Location = new Point(351, 142);
+            lblModule.Location = new Point(405, 138);
             lblModule.Name = "lblModule";
             lblModule.Size = new Size(69, 26);
             lblModule.TabIndex = 8;
@@ -561,18 +612,19 @@ namespace BYTeLog.Views
             cmbModule.FlatStyle = FlatStyle.Flat;
             cmbModule.Font = new Font("Poppins", 9.5F);
             cmbModule.ForeColor = Color.FromArgb(20, 20, 20);
-            cmbModule.Items.AddRange(new object[] { "All Modules", "Student", "Membership", "Membership Payment", "Penalty", "Penalty Payment", "Attendance", "Activity", "Checkpoint", "Clearance", "Officer", "Committee", "Archive", "User & Roles", "Settings" });
-            cmbModule.Location = new Point(348, 170);
+            cmbModule.Items.AddRange(new object[] { "(All Modules)", "Student", "Membership", "Membership Payment", "Penalty", "Penalty Payment", "Attendance", "Activity", "Checkpoint", "Clearance", "Officer", "Committee", "Archive", "User & Roles", "Settings" });
+            cmbModule.Location = new Point(400, 164);
             cmbModule.Name = "cmbModule";
-            cmbModule.Size = new Size(188, 36);
+            cmbModule.Size = new Size(200, 36);
             cmbModule.TabIndex = 9;
+            cmbModule.SelectedIndexChanged += cmbModule_SelectedIndexChanged;
             // 
             // lblActionType
             // 
             lblActionType.AutoSize = true;
             lblActionType.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblActionType.ForeColor = Color.FromArgb(52, 52, 58);
-            lblActionType.Location = new Point(551, 142);
+            lblActionType.Location = new Point(617, 138);
             lblActionType.Name = "lblActionType";
             lblActionType.Size = new Size(102, 26);
             lblActionType.TabIndex = 10;
@@ -585,79 +637,37 @@ namespace BYTeLog.Views
             cmbActionType.FlatStyle = FlatStyle.Flat;
             cmbActionType.Font = new Font("Poppins", 9.5F);
             cmbActionType.ForeColor = Color.FromArgb(20, 20, 20);
-            cmbActionType.Items.AddRange(new object[] { "All Actions", "Created", "Updated", "Deleted", "Archived", "Restored", "Login", "Logout", "Payment Recorded", "Penalty Applied", "Clearance Issued", "Attendance Marked", "Settings Changed" });
-            cmbActionType.Location = new Point(548, 170);
+            cmbActionType.Items.AddRange(new object[] { "(All Actions)", "Created", "Updated", "Deleted", "Archived", "Restored", "Login", "Logout", "Payment Recorded", "Penalty Applied", "Clearance Issued", "Attendance Marked", "Settings Changed" });
+            cmbActionType.Location = new Point(612, 164);
             cmbActionType.Name = "cmbActionType";
-            cmbActionType.Size = new Size(188, 36);
+            cmbActionType.Size = new Size(238, 36);
             cmbActionType.TabIndex = 11;
+            cmbActionType.SelectedIndexChanged += cmbActionType_SelectedIndexChanged;
             // 
-            // lblUser
+            // lblFilterUser
             // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
-            lblUser.ForeColor = Color.FromArgb(52, 52, 58);
-            lblUser.Location = new Point(751, 142);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(46, 26);
-            lblUser.TabIndex = 12;
-            lblUser.Text = "User";
+            lblFilterUser.AutoSize = true;
+            lblFilterUser.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
+            lblFilterUser.ForeColor = Color.FromArgb(52, 52, 58);
+            lblFilterUser.Location = new Point(31, 200);
+            lblFilterUser.Name = "lblFilterUser";
+            lblFilterUser.Size = new Size(46, 26);
+            lblFilterUser.TabIndex = 12;
+            lblFilterUser.Text = "User";
             // 
-            // cmbUser
+            // cmbFilterUser
             // 
-            cmbUser.BackColor = Color.FromArgb(250, 250, 252);
-            cmbUser.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbUser.FlatStyle = FlatStyle.Flat;
-            cmbUser.Font = new Font("Poppins", 9.5F);
-            cmbUser.ForeColor = Color.FromArgb(20, 20, 20);
-            cmbUser.Items.AddRange(new object[] { "All Users" });
-            cmbUser.Location = new Point(748, 170);
-            cmbUser.Name = "cmbUser";
-            cmbUser.Size = new Size(102, 36);
-            cmbUser.TabIndex = 13;
-            // 
-            // btnApplyFilter
-            // 
-            btnApplyFilter.BackColor = Color.FromArgb(58, 99, 232);
-            btnApplyFilter.FlatAppearance.BorderSize = 0;
-            btnApplyFilter.FlatStyle = FlatStyle.Flat;
-            btnApplyFilter.Font = new Font("Poppins", 9F, FontStyle.Bold);
-            btnApplyFilter.ForeColor = Color.White;
-            btnApplyFilter.IconChar = IconChar.Search;
-            btnApplyFilter.IconColor = Color.White;
-            btnApplyFilter.IconFont = IconFont.Auto;
-            btnApplyFilter.IconSize = 16;
-            btnApplyFilter.ImageAlign = ContentAlignment.MiddleLeft;
-            btnApplyFilter.Location = new Point(552, 206);
-            btnApplyFilter.Name = "btnApplyFilter";
-            btnApplyFilter.Padding = new Padding(8, 0, 0, 0);
-            btnApplyFilter.Size = new Size(148, 36);
-            btnApplyFilter.TabIndex = 14;
-            btnApplyFilter.Text = "Apply Filter";
-            btnApplyFilter.TextAlign = ContentAlignment.MiddleLeft;
-            btnApplyFilter.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnApplyFilter.UseVisualStyleBackColor = false;
-            // 
-            // btnResetFilter
-            // 
-            btnResetFilter.BackColor = Color.White;
-            btnResetFilter.FlatAppearance.BorderColor = Color.FromArgb(200, 195, 188);
-            btnResetFilter.FlatStyle = FlatStyle.Flat;
-            btnResetFilter.Font = new Font("Poppins", 9F, FontStyle.Bold);
-            btnResetFilter.ForeColor = Color.FromArgb(90, 90, 98);
-            btnResetFilter.IconChar = IconChar.RotateBack;
-            btnResetFilter.IconColor = Color.FromArgb(90, 90, 98);
-            btnResetFilter.IconFont = IconFont.Auto;
-            btnResetFilter.IconSize = 16;
-            btnResetFilter.ImageAlign = ContentAlignment.MiddleLeft;
-            btnResetFilter.Location = new Point(712, 206);
-            btnResetFilter.Name = "btnResetFilter";
-            btnResetFilter.Padding = new Padding(8, 0, 0, 0);
-            btnResetFilter.Size = new Size(138, 36);
-            btnResetFilter.TabIndex = 15;
-            btnResetFilter.Text = "Reset Filters";
-            btnResetFilter.TextAlign = ContentAlignment.MiddleLeft;
-            btnResetFilter.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnResetFilter.UseVisualStyleBackColor = false;
+            cmbFilterUser.BackColor = Color.FromArgb(250, 250, 252);
+            cmbFilterUser.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbFilterUser.FlatStyle = FlatStyle.Flat;
+            cmbFilterUser.Font = new Font("Poppins", 9.5F);
+            cmbFilterUser.ForeColor = Color.FromArgb(20, 20, 20);
+            cmbFilterUser.Items.AddRange(new object[] { "(All Users)" });
+            cmbFilterUser.Location = new Point(28, 164);
+            cmbFilterUser.Name = "cmbFilterUser";
+            cmbFilterUser.Size = new Size(176, 36);
+            cmbFilterUser.TabIndex = 13;
+            cmbFilterUser.Visible = false;
             // 
             // cardLogTable
             // 
@@ -669,7 +679,7 @@ namespace BYTeLog.Views
             cardLogTable.Controls.Add(btnExportCsv);
             cardLogTable.Controls.Add(btnExportPdf);
             cardLogTable.Controls.Add(dgvAuditLog);
-            cardLogTable.Location = new Point(30, 402);
+            cardLogTable.Location = new Point(30, 420);
             cardLogTable.Name = "cardLogTable";
             cardLogTable.Padding = new Padding(28, 24, 28, 28);
             cardLogTable.Size = new Size(878, 620);
@@ -677,7 +687,7 @@ namespace BYTeLog.Views
             // 
             // pnlLogIconBox
             // 
-            pnlLogIconBox.BackColor = Color.FromArgb(255, 247, 215);
+            pnlLogIconBox.BackColor = Color.FromArgb(255, 243, 230);
             pnlLogIconBox.Controls.Add(iconLog);
             pnlLogIconBox.Location = new Point(28, 24);
             pnlLogIconBox.Name = "pnlLogIconBox";
@@ -687,9 +697,9 @@ namespace BYTeLog.Views
             // iconLog
             // 
             iconLog.BackColor = Color.Transparent;
-            iconLog.ForeColor = Color.FromArgb(200, 150, 10);
-            iconLog.IconChar = IconChar.BookOpen;
-            iconLog.IconColor = Color.FromArgb(200, 150, 10);
+            iconLog.ForeColor = Color.FromArgb(234, 140, 30);
+            iconLog.IconChar = IconChar.Scroll;
+            iconLog.IconColor = Color.FromArgb(234, 140, 30);
             iconLog.IconFont = IconFont.Auto;
             iconLog.IconSize = 22;
             iconLog.Location = new Point(11, 11);
@@ -740,7 +750,7 @@ namespace BYTeLog.Views
             btnExportCsv.IconFont = IconFont.Auto;
             btnExportCsv.IconSize = 16;
             btnExportCsv.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExportCsv.Location = new Point(588, 82);
+            btnExportCsv.Location = new Point(568, 82);
             btnExportCsv.Name = "btnExportCsv";
             btnExportCsv.Padding = new Padding(8, 0, 0, 0);
             btnExportCsv.Size = new Size(128, 34);
@@ -749,6 +759,7 @@ namespace BYTeLog.Views
             btnExportCsv.TextAlign = ContentAlignment.MiddleLeft;
             btnExportCsv.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnExportCsv.UseVisualStyleBackColor = false;
+            btnExportCsv.Click += btnExportCsv_Click;
             // 
             // btnExportPdf
             // 
@@ -762,7 +773,7 @@ namespace BYTeLog.Views
             btnExportPdf.IconFont = IconFont.Auto;
             btnExportPdf.IconSize = 16;
             btnExportPdf.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExportPdf.Location = new Point(726, 82);
+            btnExportPdf.Location = new Point(706, 82);
             btnExportPdf.Name = "btnExportPdf";
             btnExportPdf.Padding = new Padding(8, 0, 0, 0);
             btnExportPdf.Size = new Size(124, 34);
@@ -771,6 +782,7 @@ namespace BYTeLog.Views
             btnExportPdf.TextAlign = ContentAlignment.MiddleLeft;
             btnExportPdf.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnExportPdf.UseVisualStyleBackColor = false;
+            btnExportPdf.Click += btnExportPdf_Click;
             // 
             // dgvAuditLog
             // 
@@ -790,15 +802,15 @@ namespace BYTeLog.Views
             dgvAuditLog.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAuditLog.ColumnHeadersHeight = 38;
             dgvAuditLog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvAuditLog.Columns.AddRange(new DataGridViewColumn[] { colLogId, colTimestamp, colUser, colActionType, colModule, colDescription, colStatus, colDetails });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Poppins", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(52, 52, 58);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(233, 239, 255);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(58, 99, 232);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvAuditLog.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvAuditLog.Columns.AddRange(new DataGridViewColumn[] { colLogId, colTimestamp, colUser, colActionType, colModule, colDescription, colStatus, colView });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Poppins", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(52, 52, 58);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(233, 239, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(58, 99, 232);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvAuditLog.DefaultCellStyle = dataGridViewCellStyle3;
             dgvAuditLog.EnableHeadersVisualStyles = false;
             dgvAuditLog.GridColor = Color.FromArgb(236, 230, 222);
             dgvAuditLog.Location = new Point(28, 124);
@@ -868,21 +880,29 @@ namespace BYTeLog.Views
             colStatus.ReadOnly = true;
             colStatus.Width = 88;
             // 
-            // colDetails
+            // colView
             // 
-            colDetails.HeaderText = "Details";
-            colDetails.MinimumWidth = 6;
-            colDetails.Name = "colDetails";
-            colDetails.ReadOnly = true;
-            colDetails.Text = "View";
-            colDetails.UseColumnTextForButtonValue = true;
-            colDetails.Width = 72;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(233, 239, 255);
+            dataGridViewCellStyle2.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(58, 99, 232);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(58, 99, 232);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            colView.DefaultCellStyle = dataGridViewCellStyle2;
+            colView.HeaderText = "Details";
+            colView.MinimumWidth = 6;
+            colView.Name = "colView";
+            colView.ReadOnly = true;
+            colView.Text = "View";
+            colView.UseColumnTextForButtonValue = true;
+            colView.Width = 72;
             // 
             // cardDetail
             // 
             cardDetail.BackColor = Color.White;
             cardDetail.Controls.Add(pnlDetailIconBox);
             cardDetail.Controls.Add(lblDetailTitle);
+            cardDetail.Controls.Add(btnCloseDetail);
             cardDetail.Controls.Add(dividerDetail);
             cardDetail.Controls.Add(lblDetailTimestampLbl);
             cardDetail.Controls.Add(lblDetailTimestamp);
@@ -896,11 +916,12 @@ namespace BYTeLog.Views
             cardDetail.Controls.Add(lblDetailStatus);
             cardDetail.Controls.Add(lblDetailDescLbl);
             cardDetail.Controls.Add(txtDetailDesc);
-            cardDetail.Location = new Point(30, 1044);
+            cardDetail.Location = new Point(30, 1062);
             cardDetail.Name = "cardDetail";
             cardDetail.Padding = new Padding(28, 24, 28, 28);
-            cardDetail.Size = new Size(878, 505);
+            cardDetail.Size = new Size(878, 410);
             cardDetail.TabIndex = 3;
+            cardDetail.Visible = false;
             // 
             // pnlDetailIconBox
             // 
@@ -936,23 +957,45 @@ namespace BYTeLog.Views
             lblDetailTitle.TabIndex = 1;
             lblDetailTitle.Text = "Log Entry Details";
             // 
+            // btnCloseDetail
+            // 
+            btnCloseDetail.BackColor = Color.White;
+            btnCloseDetail.FlatAppearance.BorderColor = Color.FromArgb(200, 195, 188);
+            btnCloseDetail.FlatStyle = FlatStyle.Flat;
+            btnCloseDetail.Font = new Font("Poppins", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCloseDetail.ForeColor = Color.FromArgb(122, 122, 128);
+            btnCloseDetail.IconChar = IconChar.Close;
+            btnCloseDetail.IconColor = Color.FromArgb(122, 122, 128);
+            btnCloseDetail.IconFont = IconFont.Auto;
+            btnCloseDetail.IconSize = 16;
+            btnCloseDetail.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCloseDetail.Location = new Point(722, 30);
+            btnCloseDetail.Name = "btnCloseDetail";
+            btnCloseDetail.Padding = new Padding(8, 0, 0, 0);
+            btnCloseDetail.Size = new Size(128, 34);
+            btnCloseDetail.TabIndex = 2;
+            btnCloseDetail.Text = "Close Panel";
+            btnCloseDetail.TextAlign = ContentAlignment.MiddleLeft;
+            btnCloseDetail.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCloseDetail.UseVisualStyleBackColor = false;
+            // 
             // dividerDetail
             // 
             dividerDetail.BackColor = Color.FromArgb(236, 230, 222);
             dividerDetail.Location = new Point(28, 78);
             dividerDetail.Name = "dividerDetail";
             dividerDetail.Size = new Size(822, 1);
-            dividerDetail.TabIndex = 2;
+            dividerDetail.TabIndex = 3;
             // 
             // lblDetailTimestampLbl
             // 
             lblDetailTimestampLbl.AutoSize = true;
             lblDetailTimestampLbl.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDetailTimestampLbl.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDetailTimestampLbl.Location = new Point(31, 98);
+            lblDetailTimestampLbl.Location = new Point(31, 94);
             lblDetailTimestampLbl.Name = "lblDetailTimestampLbl";
             lblDetailTimestampLbl.Size = new Size(100, 26);
-            lblDetailTimestampLbl.TabIndex = 3;
+            lblDetailTimestampLbl.TabIndex = 4;
             lblDetailTimestampLbl.Text = "Timestamp";
             // 
             // lblDetailTimestamp
@@ -961,23 +1004,24 @@ namespace BYTeLog.Views
             lblDetailTimestamp.BorderStyle = BorderStyle.FixedSingle;
             lblDetailTimestamp.Font = new Font("Poppins", 9.5F);
             lblDetailTimestamp.ForeColor = Color.FromArgb(20, 20, 20);
-            lblDetailTimestamp.Location = new Point(28, 126);
+            lblDetailTimestamp.Location = new Point(28, 122);
             lblDetailTimestamp.Name = "lblDetailTimestamp";
-            lblDetailTimestamp.Padding = new Padding(6, 0, 0, 0);
-            lblDetailTimestamp.Size = new Size(256, 31);
-            lblDetailTimestamp.TabIndex = 4;
+            lblDetailTimestamp.Padding = new Padding(8, 0, 0, 0);
+            lblDetailTimestamp.Size = new Size(260, 32);
+            lblDetailTimestamp.TabIndex = 5;
             lblDetailTimestamp.Text = "—";
             lblDetailTimestamp.TextAlign = ContentAlignment.MiddleLeft;
+            lblDetailTimestamp.Click += lblDetailTimestamp_Click;
             // 
             // lblDetailUserLbl
             // 
             lblDetailUserLbl.AutoSize = true;
             lblDetailUserLbl.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDetailUserLbl.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDetailUserLbl.Location = new Point(301, 98);
+            lblDetailUserLbl.Location = new Point(305, 94);
             lblDetailUserLbl.Name = "lblDetailUserLbl";
             lblDetailUserLbl.Size = new Size(46, 26);
-            lblDetailUserLbl.TabIndex = 5;
+            lblDetailUserLbl.TabIndex = 6;
             lblDetailUserLbl.Text = "User";
             // 
             // lblDetailUser
@@ -986,23 +1030,24 @@ namespace BYTeLog.Views
             lblDetailUser.BorderStyle = BorderStyle.FixedSingle;
             lblDetailUser.Font = new Font("Poppins", 9.5F);
             lblDetailUser.ForeColor = Color.FromArgb(20, 20, 20);
-            lblDetailUser.Location = new Point(298, 126);
+            lblDetailUser.Location = new Point(302, 122);
             lblDetailUser.Name = "lblDetailUser";
-            lblDetailUser.Padding = new Padding(6, 0, 0, 0);
-            lblDetailUser.Size = new Size(256, 31);
-            lblDetailUser.TabIndex = 6;
+            lblDetailUser.Padding = new Padding(8, 0, 0, 0);
+            lblDetailUser.Size = new Size(260, 32);
+            lblDetailUser.TabIndex = 7;
             lblDetailUser.Text = "—";
             lblDetailUser.TextAlign = ContentAlignment.MiddleLeft;
+            lblDetailUser.Click += lblDetailUser_Click;
             // 
             // lblDetailActionLbl
             // 
             lblDetailActionLbl.AutoSize = true;
             lblDetailActionLbl.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDetailActionLbl.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDetailActionLbl.Location = new Point(31, 172);
+            lblDetailActionLbl.Location = new Point(31, 170);
             lblDetailActionLbl.Name = "lblDetailActionLbl";
             lblDetailActionLbl.Size = new Size(62, 26);
-            lblDetailActionLbl.TabIndex = 7;
+            lblDetailActionLbl.TabIndex = 8;
             lblDetailActionLbl.Text = "Action";
             // 
             // lblDetailAction
@@ -1011,23 +1056,24 @@ namespace BYTeLog.Views
             lblDetailAction.BorderStyle = BorderStyle.FixedSingle;
             lblDetailAction.Font = new Font("Poppins", 9.5F);
             lblDetailAction.ForeColor = Color.FromArgb(20, 20, 20);
-            lblDetailAction.Location = new Point(28, 200);
+            lblDetailAction.Location = new Point(28, 198);
             lblDetailAction.Name = "lblDetailAction";
-            lblDetailAction.Padding = new Padding(6, 0, 0, 0);
-            lblDetailAction.Size = new Size(256, 31);
-            lblDetailAction.TabIndex = 8;
+            lblDetailAction.Padding = new Padding(8, 0, 0, 0);
+            lblDetailAction.Size = new Size(260, 32);
+            lblDetailAction.TabIndex = 9;
             lblDetailAction.Text = "—";
             lblDetailAction.TextAlign = ContentAlignment.MiddleLeft;
+            lblDetailAction.Click += lblDetailAction_Click;
             // 
             // lblDetailModuleLbl
             // 
             lblDetailModuleLbl.AutoSize = true;
             lblDetailModuleLbl.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDetailModuleLbl.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDetailModuleLbl.Location = new Point(301, 172);
+            lblDetailModuleLbl.Location = new Point(305, 170);
             lblDetailModuleLbl.Name = "lblDetailModuleLbl";
             lblDetailModuleLbl.Size = new Size(69, 26);
-            lblDetailModuleLbl.TabIndex = 9;
+            lblDetailModuleLbl.TabIndex = 10;
             lblDetailModuleLbl.Text = "Module";
             // 
             // lblDetailModule
@@ -1036,23 +1082,24 @@ namespace BYTeLog.Views
             lblDetailModule.BorderStyle = BorderStyle.FixedSingle;
             lblDetailModule.Font = new Font("Poppins", 9.5F);
             lblDetailModule.ForeColor = Color.FromArgb(20, 20, 20);
-            lblDetailModule.Location = new Point(298, 200);
+            lblDetailModule.Location = new Point(302, 198);
             lblDetailModule.Name = "lblDetailModule";
-            lblDetailModule.Padding = new Padding(6, 0, 0, 0);
-            lblDetailModule.Size = new Size(256, 31);
-            lblDetailModule.TabIndex = 10;
+            lblDetailModule.Padding = new Padding(8, 0, 0, 0);
+            lblDetailModule.Size = new Size(260, 32);
+            lblDetailModule.TabIndex = 11;
             lblDetailModule.Text = "—";
             lblDetailModule.TextAlign = ContentAlignment.MiddleLeft;
+            lblDetailModule.Click += lblDetailModule_Click;
             // 
             // lblDetailStatusLbl
             // 
             lblDetailStatusLbl.AutoSize = true;
             lblDetailStatusLbl.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDetailStatusLbl.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDetailStatusLbl.Location = new Point(31, 246);
+            lblDetailStatusLbl.Location = new Point(580, 94);
             lblDetailStatusLbl.Name = "lblDetailStatusLbl";
             lblDetailStatusLbl.Size = new Size(61, 26);
-            lblDetailStatusLbl.TabIndex = 11;
+            lblDetailStatusLbl.TabIndex = 12;
             lblDetailStatusLbl.Text = "Status";
             // 
             // lblDetailStatus
@@ -1061,23 +1108,24 @@ namespace BYTeLog.Views
             lblDetailStatus.BorderStyle = BorderStyle.FixedSingle;
             lblDetailStatus.Font = new Font("Poppins", 9.5F);
             lblDetailStatus.ForeColor = Color.FromArgb(20, 20, 20);
-            lblDetailStatus.Location = new Point(28, 274);
+            lblDetailStatus.Location = new Point(576, 122);
             lblDetailStatus.Name = "lblDetailStatus";
-            lblDetailStatus.Padding = new Padding(6, 0, 0, 0);
-            lblDetailStatus.Size = new Size(526, 31);
-            lblDetailStatus.TabIndex = 12;
+            lblDetailStatus.Padding = new Padding(8, 0, 0, 0);
+            lblDetailStatus.Size = new Size(274, 32);
+            lblDetailStatus.TabIndex = 13;
             lblDetailStatus.Text = "—";
             lblDetailStatus.TextAlign = ContentAlignment.MiddleLeft;
+            lblDetailStatus.Click += lblDetailStatus_Click;
             // 
             // lblDetailDescLbl
             // 
             lblDetailDescLbl.AutoSize = true;
             lblDetailDescLbl.Font = new Font("Poppins", 8.5F, FontStyle.Bold);
             lblDetailDescLbl.ForeColor = Color.FromArgb(52, 52, 58);
-            lblDetailDescLbl.Location = new Point(31, 320);
+            lblDetailDescLbl.Location = new Point(31, 248);
             lblDetailDescLbl.Name = "lblDetailDescLbl";
             lblDetailDescLbl.Size = new Size(185, 26);
-            lblDetailDescLbl.TabIndex = 13;
+            lblDetailDescLbl.TabIndex = 14;
             lblDetailDescLbl.Text = "Full Description / Notes";
             // 
             // txtDetailDesc
@@ -1086,14 +1134,14 @@ namespace BYTeLog.Views
             txtDetailDesc.BorderStyle = BorderStyle.FixedSingle;
             txtDetailDesc.Font = new Font("Poppins", 9F);
             txtDetailDesc.ForeColor = Color.FromArgb(52, 52, 58);
-            txtDetailDesc.Location = new Point(28, 348);
+            txtDetailDesc.Location = new Point(28, 276);
             txtDetailDesc.Multiline = true;
             txtDetailDesc.Name = "txtDetailDesc";
             txtDetailDesc.ReadOnly = true;
             txtDetailDesc.ScrollBars = ScrollBars.Vertical;
-            txtDetailDesc.Size = new Size(822, 120);
-            txtDetailDesc.TabIndex = 14;
-            txtDetailDesc.Text = "Select a log entry from the table above and click \"View\" to see full details here.";
+            txtDetailDesc.Size = new Size(822, 100);
+            txtDetailDesc.TabIndex = 15;
+            txtDetailDesc.Text = "Bruh";
             // 
             // AuditLogView
             // 
@@ -1102,7 +1150,7 @@ namespace BYTeLog.Views
             BackColor = Color.FromArgb(244, 239, 231);
             Controls.Add(outerScrollPanel);
             Name = "AuditLogView";
-            Size = new Size(955, 1580);
+            Size = new Size(955, 770);
             outerScrollPanel.ResumeLayout(false);
             innerContentPanel.ResumeLayout(false);
             cardStats.ResumeLayout(false);
@@ -1183,8 +1231,8 @@ namespace BYTeLog.Views
         private System.Windows.Forms.ComboBox cmbModule;
         private System.Windows.Forms.Label lblActionType;
         private System.Windows.Forms.ComboBox cmbActionType;
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.ComboBox cmbUser;
+        private System.Windows.Forms.Label lblFilterUser;
+        private System.Windows.Forms.ComboBox cmbFilterUser;
         private FontAwesome.Sharp.IconButton btnApplyFilter;
         private FontAwesome.Sharp.IconButton btnResetFilter;
         private System.Windows.Forms.Panel cardLogTable;
@@ -1203,11 +1251,12 @@ namespace BYTeLog.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn colModule;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
-        private System.Windows.Forms.DataGridViewButtonColumn colDetails;
+        private System.Windows.Forms.DataGridViewButtonColumn colView;
         private System.Windows.Forms.Panel cardDetail;
         private System.Windows.Forms.Panel pnlDetailIconBox;
         private FontAwesome.Sharp.IconPictureBox iconDetail;
         private System.Windows.Forms.Label lblDetailTitle;
+        private FontAwesome.Sharp.IconButton btnCloseDetail;
         private System.Windows.Forms.Panel dividerDetail;
         private System.Windows.Forms.Label lblDetailTimestampLbl;
         private System.Windows.Forms.Label lblDetailTimestamp;
