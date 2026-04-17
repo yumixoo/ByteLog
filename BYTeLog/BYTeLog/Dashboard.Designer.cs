@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-using ReaLTaiizor.Controls; // For TaiizorButton
+using ReaLTaiizor.Controls;
 
 namespace BYTeLog
 {
