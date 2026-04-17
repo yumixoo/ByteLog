@@ -177,7 +177,7 @@ namespace BYTeLog.Views
             outerScrollPanel.Dock = DockStyle.Fill;
             outerScrollPanel.Location = new Point(0, 0);
             outerScrollPanel.Name = "outerScrollPanel";
-            outerScrollPanel.Size = new Size(955, 615);
+            outerScrollPanel.Size = new Size(955, 550);
             outerScrollPanel.TabIndex = 0;
             // 
             // innerContentPanel
@@ -305,7 +305,7 @@ namespace BYTeLog.Views
             txtDept.Name = "txtDept";
             txtDept.Size = new Size(824, 31);
             txtDept.TabIndex = 11;
-            txtDept.Text = "College of Computing Studies";
+            txtDept.Text = "Department of Information Technology";
             // 
             // btnSaveOrg
             // 
@@ -1492,7 +1492,7 @@ namespace BYTeLog.Views
             BackColor = Color.FromArgb(244, 239, 231);
             Controls.Add(outerScrollPanel);
             Name = "SettingsView";
-            Size = new Size(955, 2400);
+            Size = new Size(955, 550);
             outerScrollPanel.ResumeLayout(false);
             innerContentPanel.ResumeLayout(false);
             cardOrgInfo.ResumeLayout(false);
